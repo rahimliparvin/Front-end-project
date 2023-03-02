@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-//Valyuta 
+	//Valyuta 
 
 	let europrice = document.querySelector("#navup .europrice");
 
@@ -108,4 +108,99 @@ $(document).ready(function () {
 		intslide('start');
 	});//prev
 	//slideshow
+
+	$('.carousel .carousel-item').each(function () {
+		var minPerSlide = 4;
+		var next = $(this).next();
+		if (!next.length) {
+			next = $(this).siblings(':first');
+		}
+		next.children(':first-child').clone().appendTo($(this));
+
+		for (var i = 0; i < minPerSlide; i++) { next = next.next(); if (!next.length) { next = $(this).siblings(':first'); } next.children(':first-child').clone().appendTo($(this)); }
+	});
+
+
+
+
+
+	var swiper = new Swiper(".mySwiper", {
+		loop: true,
+		spaceBetween: 30,
+		centeredSlides: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+
+	var swiper = new Swiper(".carousel", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		centeredSlides: true,
+		pagination: {
+			el: ".swiper-paginations",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		}
+	})
+
+	// let cardsicon = document.querySelector("#carouselcards .carouselcard1");
+
+
+
+
+	// cardsicon.addEventListener("mouseover", function () {
+
+	// 	let icon = document.querySelector(".cardicons");
+	// 	icon.classList.remove("d-none")
+	// })
+	
+	// cardsicon.addEventListener("mouseleave", function () {
+
+	// 	let icon = document.querySelector(".cardicons");
+	// 	icon.classList.add("d-none")
+	// })
+
+
+
+
+
 })
+
+
+
+// var swiper = new Swiper(".mySwiper", {
+// 	loop:true,
+// 	spaceBetween: 30,
+// 	centeredSlides: true,
+// 	autoplay: {
+// 	  delay: 2500,
+// 	  disableOnInteraction: false,
+// 	},
+// 	pagination: {
+// 	  el: ".swiper-pagination",
+// 	  clickable: true,
+// 	},
+// });
+
+// var swiper = new Swiper(".carousel", {
+//     slidesPerView: 4,
+//     spaceBetween: 30,
+//     centeredSlides: true,
+//     pagination: {
+//       el: ".swiper-paginations",
+//       clickable: true,
+//     },
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     }
+// })

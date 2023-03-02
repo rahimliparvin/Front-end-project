@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +41,7 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle firsta" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="./assets/img/english flag.svg" alt=""> English
+                                            <img src="" alt=""> English
                                         </a>
                                         <!-- <ul class="dropdown-menu dropdown-secondmenu">
                                             <li><img src="./assets/img/english flag.svg" alt=""><span>English</span>
@@ -106,80 +107,156 @@
         </section>
     </header>
     <main>
-        <section id="slider">
-            <div class="container-fluid">
-                <div id="slideshow">
-                    <div class="slideitem current">
+
+        <!-- FIRSTSLIDER (HOMEPAGE) -->
+
+
+        <section id="sliderswip">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide col-lg-12 col-md-6 col-sm-3">
                         <h1>HUGE SALE</h1>
                         <h3>Up to 70 %</h3>
                         <button><span>SHOP NOW</span></button>
-                        <img src="./assets/img/slider background img1.jpg">
+                        <img src="./assets/img/slider background img1.jpg" alt="">
                     </div>
-                    <div class="slideitem">
+                    <div class="swiper-slide  col-lg-12 col-md-6 col-sm-3">
                         <h1>BIGGEST DISCOUNT</h1>
                         <h3>Check the promotion</h3>
                         <button><span>SHOP NOW</span></button>
-                        <img src="./assets/img/slider background img2.jpg">
+                        <img src="./assets/img/slider background img2.jpg" alt="">
                     </div>
-                    <div class="slideitem">
+                    <div class="swiper-slide  col-lg-12 col-md-6 col-sm-3">
                         <h1>BIGGEST SALE</h1>
                         <h3>Dont miss it</h3>
                         <button><span>SHOP NOW</span></button>
-                        <img src="./assets/img/slider background img3.jpg">
+                        <img src="./assets/img/slider background img3.jpg" alt="">
                     </div>
-                    <div class="slideitem">
+                    <div class="swiper-slide  col-lg-12 col-md-6 col-sm-3">
                         <h1>OUR BEST PRODUCTS</h1>
                         <h3>Special selection</h3>
                         <button><span>SHOP NOW</span></button>
-                        <img src="./assets/img/slider background img4.jpg">
+                        <img src="./assets/img/slider background img4.jpg" alt="">
                     </div>
-                    <div class="slideitem">
+                    <div class="swiper-slide  col-lg-12 col-md-6 col-sm-3">
                         <h1>MASSIVE SALE</h1>
                         <h3>Only for today</h3>
                         <button><span>SHOP NOW</span></button>
-                        <img src="./assets/img/slider background img5.jpg">
+                        <img src="./assets/img/slider background img5.jpg" alt="">
                     </div>
                 </div>
+
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
 
         </section>
+
+        <!-- INFO CARDS -->
         <section id="servicesinfos">
             <div class="container">
                 <div class="row">
                     <div class="col-3">
-                        <div class="bonusplus">
+                        <div class="bonusplus firstbonusplus">
                             <div class="prise">
                                 <i class="fa-solid fa-gift"></i>
                             </div>
-                            <div  class="priseinfo">
+                            <div class="priseinfo">
                                 <p>BONUS PLUS</p>
                                 <span>Get a bonus plus for buying more that three products</span>
                             </div>
+                            <div class="borderline"></div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="bonusplus">
+                            <div class="prise">
+                                <i class="fa-solid fa-truck-fast truck"></i>
+                            </div>
+                            <div class="priseinfo">
+                                <p>FREE SHIPPING</p>
+                                <span>Free shipping on all orders over $99</span>
+                            </div>
+                            <div class="borderline"></div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="bonusplus">
+                            <div class="prise">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <div class="priseinfo">
+                                <p>MONEY BACK GUARANTEE</p>
+                                <span>100% money back guarantee</span>
+                            </div>
+                            <div class="borderline"></div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="bonusplus lastbonusplus">
+                            <div class="prise">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <div class="priseinfo">
+                                <p>ONLINE SUPPORT 24/7</p>
+                                <span>Call us: 02 3555 65454 55</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3"></div>
-                    <div class="col-3"></div>
-                    <div class="col-3"></div>
+
                 </div>
             </div>
         </section>
+
+        <!-- Carousel card -->
+
+        <section id="carouselcards">
+            <div class="container">
+                <div class="swiper carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="carouselcard1">
+                                <div class="img">
+                                    <img src="./assets/img/carouselproduct1" alt="">
+                                </div>
+                                 <a class="heart" href=""><i class="fa-regular fa-heart "></i></a><br>
+                                 <a class="eyes" href=""><i class="fa-regular fa-eye eyes"></i><br></a>   
+                                 <a class="refresh" href=""><i class="fa-solid fa-arrows-rotate refresh"></i></a>
+
+                                 <div class="addcart">
+                                    <span>Wireless Mondo</span><br>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>$<span>266.00</span><br>
+                                    <button type="submit">ADD TO CART <i class="fa-solid fa-cart-shopping"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide"><img src="" alt=""></div>
+                        <div class="swiper-slide"><img src="" alt=""></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-paginations"></div>
+                </div>
+        </section>
+
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="https://kit.fontawesome.com/e29b1b43d1.js" crossorigin="anonymous"></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
     <script src="./assets/js/home.js"></script>
 </body>
 
