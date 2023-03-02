@@ -1,108 +1,111 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
 
+//Valyuta 
+
+	let europrice = document.querySelector("#navup .europrice");
+
+	europrice.addEventListener("click", function () {
+		let euroPriceText = this.firstElementChild.innerText
+
+		this.parentNode.previousElementSibling.innerText = euroPriceText
+	})
+
+	let usdprice = document.querySelector("#navup .usdprice");
+
+	usdprice.addEventListener("click", function () {
+		let usdPriceText = this.firstElementChild.innerText
+
+		this.parentNode.previousElementSibling.innerText = usdPriceText
+	})
 
 
-    let europrice = document.querySelector("#navup .europrice");
+	//SLIDER
 
-    europrice.addEventListener("click",function(){
-     let euroPriceText = this.firstElementChild.innerText
+	$("#slideshow > div:gt(0)").hide();
 
-     this.parentNode.previousElementSibling.innerText = euroPriceText
-    })
+	var buttons = "<button class=\"slidebtn prev\"><i class=\"fa fa-chevron-circle-left\"></i></button><button class=\"slidebtn next\"><i class=\"fa fa-chevron-circle-right\"></i></button\>";
 
-    let usdprice = document.querySelector("#navup .usdprice");
+	var slidesl = $('.slideitem').length
+	var d = "<li class=\"dot active-dot\">&bull;</li>";
+	for (var i = 1; i < slidesl; i++) {
+		d = d + "<li class=\"dot\">&bull;</li>";
+	}
+	var dots = "<ul class=\"slider-dots\">" + d + "</ul\>";
 
-    usdprice.addEventListener("click",function(){
-     let usdPriceText = this.firstElementChild.innerText
+	$("#slideshow").append(dots).append(buttons);
+	var interval = setInterval(slide, 3000);
 
-     this.parentNode.previousElementSibling.innerText = usdPriceText
-    })
-
-    $("#slideshow > div:gt(0)").hide();
-
-var buttons = "<button class=\"slidebtn prev\"><i class=\"fa fa-chevron-circle-left\"></i></button><button class=\"slidebtn next\"><i class=\"fa fa-chevron-circle-right\"></i></button\>";
-
-var slidesl = $('.slideitem').length
-var d = "<li class=\"dot active-dot\">&bull;</li>";
-for (var i = 1; i < slidesl; i++) {
-  d = d+"<li class=\"dot\">&bull;</li>";
-}	
-var dots = "<ul class=\"slider-dots\">" + d + "</ul\>";
-
-$("#slideshow").append(dots).append(buttons);
-var interval = setInterval(slide, 3000);
-
-function intslide(func) {
-	if (func == 'start') { 
- 	interval = setInterval(slide, 3000);
-	} else {
-		clearInterval(interval);		
+	function intslide(func) {
+		if (func == 'start') {
+			interval = setInterval(slide, 3000);
+		} else {
+			clearInterval(interval);
 		}
-}
+	}
 
-function slide() {
+	function slide() {
 		sact('next', 0, 1200);
-}
-	
-function sact(a, ix, it) {
-        var currentSlide = $('.current');
-        var nextSlide = currentSlide.next('.slideitem');
-        var prevSlide = currentSlide.prev('.slideitem');
-		    var reqSlide = $('.slideitem').eq(ix);
+	}
 
-		    var currentDot = $('.active-dot');
-    	  var nextDot = currentDot.next();
-    	  var prevDot = currentDot.prev();
-		    var reqDot = $('.dot').eq(ix);
-		
-        if (nextSlide.length == 0) {
-      		nextDot = $('.dot').first();
-            nextSlide = $('.slideitem').first();
-            }
+	function sact(a, ix, it) {
+		var currentSlide = $('.current');
+		var nextSlide = currentSlide.next('.slideitem');
+		var prevSlide = currentSlide.prev('.slideitem');
+		var reqSlide = $('.slideitem').eq(ix);
 
-        if (prevSlide.length == 0) {
-      		prevDot = $('.dot').last();
-            prevSlide = $('.slideitem').last();
-            }
-			
+		var currentDot = $('.active-dot');
+		var nextDot = currentDot.next();
+		var prevDot = currentDot.prev();
+		var reqDot = $('.dot').eq(ix);
+
+		if (nextSlide.length == 0) {
+			nextDot = $('.dot').first();
+			nextSlide = $('.slideitem').first();
+		}
+
+		if (prevSlide.length == 0) {
+			prevDot = $('.dot').last();
+			prevSlide = $('.slideitem').last();
+		}
+
 		if (a == 'next') {
 			var Slide = nextSlide;
 			var Dot = nextDot;
-			}
-			else if (a == 'prev') {
-				var Slide = prevSlide;
-				var Dot = prevDot;
-				}
-				else {
-					var Slide = reqSlide;
-					var Dot = reqDot;
-					}
+		}
+		else if (a == 'prev') {
+			var Slide = prevSlide;
+			var Dot = prevDot;
+		}
+		else {
+			var Slide = reqSlide;
+			var Dot = reqDot;
+		}
 
-        currentSlide.fadeOut(it).removeClass('current');
-        Slide.fadeIn(it).addClass('current');
-		
-    	currentDot.removeClass('active-dot');
-    	Dot.addClass('active-dot');
-}	
+		currentSlide.fadeOut(it).removeClass('current');
+		Slide.fadeIn(it).addClass('current');
 
-$('.next').on('click', function(){
-		intslide('stop');						
+		currentDot.removeClass('active-dot');
+		Dot.addClass('active-dot');
+	}
+
+	$('.next').on('click', function () {
+		intslide('stop');
 		sact('next', 0, 400);
-		intslide('start');						
+		intslide('start');
 	});//next
 
-$('.prev').on('click', function(){
-		intslide('stop');						
+	$('.prev').on('click', function () {
+		intslide('stop');
 		sact('prev', 0, 400);
-		intslide('start');						
+		intslide('start');
 	});//prev
 
-$('.dot').on('click', function(){
+	$('.dot').on('click', function () {
 		intslide('stop');
-		var index  = $(this).index();
+		var index = $(this).index();
 		sact('dot', index, 400);
-		intslide('start');						
+		intslide('start');
 	});//prev
-//slideshow
+	//slideshow
 })

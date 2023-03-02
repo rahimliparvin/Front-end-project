@@ -188,67 +188,107 @@
   padding-bottom: 1px;
 }
 
-#slider #slideshow {
+#slideshow {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  padding: 1% 1% 56.25% 1%;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  padding: 1% 1% 45% 1%;
   box-sizing: border-box;
 }
-#slider #slideshow > div {
+#slideshow > div {
   position: absolute;
   top: 10px;
   left: 10px;
   right: 10px;
   bottom: 10px;
 }
-#slider #slideshow > div > img {
+#slideshow > div > img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  cursor: pointer;
 }
-#slider #slideshow:hover i {
+
+#slideshow:hover i,
+#slideshow:hover .slider-dots {
   opacity: 1;
 }
-#slider #slideshow:hover .slider-dots {
-  opacity: 1;
+
+#slideshow .slideitem h1 {
+  position: absolute;
+  top: 230px;
+  left: 100px;
+  cursor: pointer;
+  font-size: 48px;
+  text-align: left;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
 }
-#slider .slidebtn {
+#slideshow h3 {
+  position: absolute;
+  top: 290px;
+  left: 100px;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+#slideshow button {
+  position: absolute;
+  top: 370px;
+  left: 100px;
+  background-color: #ef6c00;
+  color: #fff;
+  padding: 5px 33px;
+  width: 200px;
+  height: 45px;
+  box-shadow: none !important;
+  border: none;
+  border-radius: 5px;
+}
+#slideshow button span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.slidebtn {
   z-index: 99;
   background: transparent;
   outline: none;
   border: none;
   transition: all 0.3s;
+  display: none;
 }
-#slider .slidebtn:active {
-  outline: none;
-}
-#slider .slidebtn i {
+.slidebtn i {
   color: #FFF;
   font-size: 72px;
-  opacity: 0.2;
+  opacity: 0;
   transition: all 0.3s;
 }
-#slider .slidedtn:focus {
+
+.slidebtn:active,
+.slidedtn:focus {
   outline: none;
 }
-#slider .prev {
+
+.prev {
   position: absolute;
   top: 10px;
   left: 10px;
   bottom: 10px;
+  display: none;
 }
-#slider .next {
+
+.next {
   position: absolute;
   top: 10px;
   right: 10px;
   bottom: 10px;
 }
-#slider .slider-dots {
-  opacity: 0.2;
+
+.slider-dots {
+  opacity: 0;
   list-style: none;
   display: inline-block;
   padding-left: 0;
@@ -260,13 +300,58 @@
   z-index: 99;
   transition: all 0.3s;
 }
-#slider .slider-dots li {
+.slider-dots li {
   color: #000;
   display: inline;
   font-size: 48px;
   margin-right: 5px;
   cursor: pointer;
 }
-#slider .slider-dots li.active-dot {
+.slider-dots li.active-dot {
   color: #fff;
+}
+
+#servicesinfos {
+  margin-top: 30px;
+}
+#servicesinfos .bonusplus {
+  display: flex;
+  height: 133px;
+  background-color: #FFF;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+#servicesinfos .bonusplus .prise {
+  margin-top: 16px;
+  width: 47px;
+  height: 100px;
+  background-color: white;
+}
+#servicesinfos .bonusplus .prise i {
+  color: #ef6c00 !important;
+  font-size: 41px;
+  margin-right: 10px;
+  line-height: 65px;
+  clear: both;
+  width: auto;
+  height: 100%;
+  padding: 0 3px;
+}
+#servicesinfos .bonusplus .prise p {
+  display: inline-block;
+}
+#servicesinfos .bonusplus .priseinfo {
+  width: 235px;
+  height: 100px;
+  background-color: white;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+#servicesinfos .bonusplus .priseinfo p {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+#servicesinfos .bonusplus .priseinfo span {
+  font-weight: 600;
+  font-size: 14.5px;
 }/*# sourceMappingURL=homepage.css.map */
