@@ -152,22 +152,134 @@ $(document).ready(function () {
 		}
 	})
 
-	// let cardsicon = document.querySelector("#carouselcards .carouselcard1");
 
 
+	// let cardsicons = document.querySelectorAll("#carouselcards .swiper-slide");
+
+	// cardsicons.forEach(cardsicon => {
+
+	// 	cardsicon.addEventListener("mouseover", function () {
+
+	// 		let refreshs = document.querySelectorAll(".refresh")
+
+	// 		for (const refresh of refreshs) {
+				
+	// 			refresh.classList.remove("d-none")
+
+	// 		}
 
 
-	// cardsicon.addEventListener("mouseover", function () {
+	// 		let hearts = document.querySelectorAll(".heart");
+			
+	// 		for (const heart of hearts) {
+	// 			heart.classList.remove("d-none")
+	// 		}
 
-	// 	let icon = document.querySelector(".cardicons");
-	// 	icon.classList.remove("d-none")
-	// })
-	
-	// cardsicon.addEventListener("mouseleave", function () {
+	// 		let eyess = document.querySelectorAll(".eyes");
+			
+	// 		for (const eyes of eyess) {
+	// 			eyes.classList.remove("d-none")
+	// 		}
 
-	// 	let icon = document.querySelector(".cardicons");
-	// 	icon.classList.add("d-none")
-	// })
+	// 	})
+
+
+	// 	cardsicon.addEventListener("mouseleave", function () {
+
+	// 		let refresh = document.querySelector(".refresh")
+
+	// 		refresh.classList.add("d-none")
+
+	// 		let heart = document.querySelector(".heart");
+	// 		heart.classList.add("d-none")
+
+	// 		let eyes = document.querySelector(".eyes");
+	// 		eyes.classList.add("d-none")
+
+	// 	})
+
+	// });
+
+
+	//  cardsicon.forEach(element => {
+
+	// 	element.addEventListener("mouseover",function(){
+	// 		//cardsicon.addEventListener("mouseover", function () {
+
+	// 			let icon = document.querySelector(".heart");
+	// 			icon.classList.remove("d-none")
+	// 		})
+
+	// 		element.addEventListener("mouseleave", function () {
+
+	// 			let icon = document.querySelector(".heart");
+	// 			icon.classList.add("d-none")
+	// 		})
+
+	// 		element.addEventListener("mouseover", function () {
+
+	// 			let icon = document.querySelector(".eyes");
+	// 			icon.classList.remove("d-none")
+	// 		})
+
+	// 		element.addEventListener("mouseleave", function () {
+
+	// 			let icon = document.querySelector(".eyes");
+	// 			icon.classList.add("d-none")
+	// 		})
+
+	// 		element.addEventListener("mouseover", function () {
+
+	// 			let icon = document.querySelector(".refresh");
+	// 			icon.classList.remove("d-none")
+	// 		})
+
+	// 		element.addEventListener("mouseleave", function () {
+
+	// 			let icon = document.querySelector(".refresh");
+	// 			icon.classList.add("d-none")
+	// 		})
+
+
+	// 		let iconheart = document.querySelector(".heart i")
+
+	// 		iconheart.addEventListener("mouseover",function(){
+
+	// 			this.style.color ="#EF6C00";
+	// 		})
+
+	// 		iconheart.addEventListener("mouseleave",function(){
+
+	// 			this.style.color ="#333333";
+	// 		})
+
+	// 		let iconeyes = document.querySelector(".eyes i")
+
+	// 		iconeyes.addEventListener("mouseover",function(){
+
+	// 			this.style.color ="#EF6C00";
+	// 		})
+
+	// 		iconeyes.addEventListener("mouseleave",function(){
+
+	// 			this.style.color ="#333333";
+	// 		})
+
+	// 		let iconrefresh = document.querySelector(".refresh i")
+
+	// 		iconrefresh.addEventListener("mouseover",function(){
+
+	// 			this.style.color ="#EF6C00";
+	// 		})
+
+	// 		iconrefresh.addEventListener("mouseleave",function(){
+
+	// 			this.style.color ="#333333";
+	//	})
+	//	})
+
+	// });
+
 
 
 

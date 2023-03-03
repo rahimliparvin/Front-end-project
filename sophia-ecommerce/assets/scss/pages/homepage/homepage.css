@@ -341,17 +341,167 @@
 #carouselcards {
   margin-bottom: 500px;
 }
-#carouselcards body {
-  position: relative;
-  height: 100%;
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
+#carouselcards .container .swipers {
+  margin-left: -460px !important;
 }
-#carouselcards .swiper {
-  width: 100%;
-  height: 100%;
+#carouselcards .container .swiper-button-prev {
+  background-color: #EF6C00;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#carouselcards .container .swiper-button-prev:after {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+#carouselcards .container .swiper-button-next {
+  background-color: #EF6C00;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#carouselcards .container .swiper-button-next:after {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+#carouselcards .container .swiper {
+  height: 400px;
+  background: #fff;
+}
+#carouselcards .container .swiper .swiper-paginations span {
+  display: none;
+}
+#carouselcards .container .swiper .swiper-wrapper {
+  width: 245px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide {
+  width: 245px !important;
+  height: 383px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard {
+  position: relative;
+  background-color: #fff;
+  width: 245px;
+  height: 380px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .img {
+  width: 245px;
+  height: 180px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .img a img {
+  width: 180px;
+  height: 180px;
+  margin-left: 25px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard a {
+  text-decoration: none;
+  position: absolute;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard a i {
+  color: #333333;
+  font-size: 24px;
+  margin-top: 10px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard :hover i {
+  color: #ef6c00;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .heart {
+  top: 21px;
+  left: 200px;
+  display: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .eyes {
+  top: 56px;
+  left: 199px;
+  display: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .refresh {
+  top: 91px;
+  left: 202px;
+  display: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart {
+  height: 178px;
+  width: 245px;
+  position: relative;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart span {
+  font-size: 14px;
+  color: #A2A2A2;
+  margin-left: 15px;
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart h5 {
+  margin-left: 15px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart i {
+  color: #FFA726;
+  font-size: 17px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .star {
+  margin-left: 15px;
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .dollar {
+  margin-left: 45px;
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-weight: 600;
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .cardproductprice {
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-weight: 600;
+  margin-left: 0px;
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .add-card-button button {
+  margin-top: 35px;
+  width: 215.19px;
+  height: 43px;
+  background-color: #EF6C00;
+  color: white;
+  border: none;
+  margin-left: 15px;
+  padding: 0px 16px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .add-card-button button span {
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-left: 0px;
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .add-card-button button i {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .add-card-button :hover {
+  background-color: white;
+  border: 3px solid #ef6c00;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .add-card-button :hover span {
+  color: #ef6c00;
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide .carouselcard .addcart .add-card-button :hover i {
+  color: #ef6c00;
+  border: none;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide :hover .heart {
+  display: block;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide :hover .eyes {
+  display: block;
+}
+#carouselcards .container .swiper .swiper-wrapper .swiper-slide :hover .refresh {
+  display: block;
 }/*# sourceMappingURL=homepage.css.map */
