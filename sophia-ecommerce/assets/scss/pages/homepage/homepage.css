@@ -168,6 +168,11 @@
   color: white;
   font-size: 20px;
 }
+#navdown .telcart .minicart .num {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
 #navdown .telcart .minicart span {
   color: white;
   font-size: 15px;
@@ -186,6 +191,53 @@
   padding-left: 6px;
   padding-right: 6px;
   padding-bottom: 1px;
+}
+
+#navexp {
+  height: 68px;
+  background-color: #F5F5F5;
+}
+#navexp .nav-expend {
+  height: 64px;
+  background-color: #F5F5F5;
+}
+#navexp .nav-expend .navbar-light {
+  background-color: #F5F5F5 !important;
+}
+#navexp .nav-expend .navbar-light .navbar-collapse {
+  height: 50px;
+}
+#navexp .nav-expend .navbar-light .nav-item {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #383838;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0 25px;
+  line-height: 63px;
+}
+#navexp .nav-expend .navbar-light .dropdown-menu a {
+  font-size: 14px;
+}
+#navexp .nav-expend .navbar-light .dropdown-menu .dropdown-item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: 48px;
+  height: 48px;
+  padding: 0 16px;
+  text-align: left;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
 }
 
 #servicesinfos {
@@ -450,9 +502,6 @@
   display: block;
 }
 
-#carouselcards {
-  margin-bottom: 500px;
-}
 #carouselcards .container .swipers {
   margin-left: -460px !important;
 }
@@ -616,4 +665,275 @@
 }
 #carouselcards .container .swiper .swiper-wrapper .swiper-slide :hover .refresh {
   display: block;
+}
+
+#stockproduct .col-lg-6 .leptop {
+  background-color: #F5F5F5;
+  width: 642px;
+  height: 450px;
+  padding: 20px;
+  position: relative;
+}
+#stockproduct .col-lg-6 .leptop .lepinfo {
+  position: absolute;
+}
+#stockproduct .col-lg-6 .leptop .lepinfo h4 {
+  color: #2D2A25;
+  font-weight: 700;
+  font-size: 21px;
+}
+#stockproduct .col-lg-6 .leptop .lepinfo p {
+  font-size: 16px;
+  color: #383838;
+  font-weight: 500;
+}
+#stockproduct .col-lg-6 .leptop .lepinfo a {
+  font-size: 16px;
+  color: #383838;
+  font-weight: 700;
+  text-decoration: none;
+}
+#stockproduct .col-lg-6 .leptop .lepimg img {
+  width: 486px;
+  height: 417px;
+  margin-left: 160px;
+  margin-top: 45px;
+}
+#stockproduct .tablet {
+  background-color: #F5F5F5;
+  width: 301px;
+  height: 161px;
+  padding: 10px;
+  background-image: url("../../../img/tabletimg.png");
+  background-size: cover;
+}
+#stockproduct .tablet .tabletinfo {
+  width: 130px;
+  height: 121px;
+}
+#stockproduct .tablet .tabletinfo h4 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #2D2A25;
+}
+#stockproduct .tablet .tabletinfo p {
+  font-size: 16px;
+  color: #383838;
+}
+#stockproduct .tablet .tabletinfo a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #383838;
+  font-weight: 700;
+}
+#stockproduct .camera {
+  background-color: #F5F5F5;
+  width: 301px;
+  height: 161px;
+  background-image: url("../../../img/camerabackgroundimage.png");
+  background-size: cover;
+}
+#stockproduct .camera .camerainfo {
+  width: 130px;
+  height: 121px;
+}
+#stockproduct .camera .camerainfo h4 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #2D2A25;
+}
+#stockproduct .camera .camerainfo p {
+  font-size: 16px;
+  color: #383838;
+}
+#stockproduct .camera .camerainfo a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #383838;
+  font-weight: 700;
+}
+#stockproduct .col-12 {
+  margin-top: 10px;
+}
+#stockproduct .col-12 .smartfon {
+  margin-top: 10px;
+  background-color: #F5F5F5;
+  width: 636px;
+  height: 280px;
+  padding: 20px;
+  margin-right: 50px;
+  background-image: url(../../../img/smartfonbackgroundimg.png);
+  background-size: cover;
+  background-position-x: center;
+}
+#stockproduct .col-12 .smartfon .smartfoninfo {
+  width: 291px;
+  height: 111px;
+}
+#stockproduct .col-12 .smartfon .smartfoninfo h4 {
+  font-size: 37px;
+  font-weight: 500;
+  color: #2D2A25;
+  margin-bottom: 5px;
+}
+#stockproduct .col-12 .smartfon .smartfoninfo p {
+  font-size: 16px;
+  color: #383838;
+}
+#stockproduct .col-12 .smartfon .smartfoninfo a {
+  width: 135px;
+  height: 60px;
+  padding: 10px 25px;
+  background-color: #ef6c00;
+  text-decoration: none;
+  padding-top: 20px;
+  border-radius: 5px;
+  padding-bottom: 20px;
+}
+#stockproduct .col-12 .smartfon .smartfoninfo a span {
+  font-size: 27px !important;
+  color: #383838;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+#footer {
+  background-color: #F5F5F5;
+  height: 350px;
+}
+#footer .logo-service {
+  width: 689px;
+  background-color: #F5F5F5;
+  display: flex;
+}
+#footer .logo-service .logo-about {
+  width: 388px;
+  height: 225px;
+  padding-left: 15px;
+}
+#footer .logo-service .logo-about a {
+  text-decoration: none;
+  color: #383838;
+}
+#footer .logo-service .logo-about p {
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .logo-service .services {
+  width: 299px;
+  margin-left: 25px;
+}
+#footer .logo-service .services h5 {
+  color: #383838;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#footer .logo-service .services ul {
+  padding: 0px;
+}
+#footer .logo-service .services ul li {
+  list-style: none;
+}
+#footer .logo-service .services ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 32px;
+  color: #333;
+}
+#footer .subscribe-address {
+  width: 636px;
+  display: flex;
+  background-color: #F5F5F5;
+}
+#footer .subscribe-address .subscribe {
+  width: 315px;
+  padding-right: 15px;
+}
+#footer .subscribe-address .subscribe h5 {
+  color: #383838;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#footer .subscribe-address .subscribe p {
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .subscribe input {
+  height: 45px;
+  width: 280px;
+  background: #fff;
+  font-size: 15px;
+  line-height: 45px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 0 65px 0 20px;
+  color: #777;
+}
+#footer .subscribe-address .subscribe button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+  z-index: 222;
+  background-color: #ef6c00;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 45px;
+  width: 280px;
+}
+#footer .subscribe-address .addresscommunications {
+  width: 315px;
+}
+#footer .subscribe-address .addresscommunications h5 {
+  color: #383838;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#footer .subscribe-address .addresscommunications .address p {
+  display: inline-block;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .addresscommunications .telnumber p {
+  display: inline-block;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .addresscommunications .message p {
+  display: inline-block;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .addresscommunications .socials ul {
+  display: flex;
+  padding: 0px;
+}
+#footer .subscribe-address .addresscommunications .socials ul li {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 5px;
+  list-style: none;
+}
+#footer .subscribe-address .addresscommunications .socials ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 32px;
+  color: #333;
 }/*# sourceMappingURL=homepage.css.map */
