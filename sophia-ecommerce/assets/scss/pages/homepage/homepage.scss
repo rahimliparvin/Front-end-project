@@ -2,9 +2,7 @@
 
     background-color: #222222;
 
-    // .container{
-    //     width: 100% !important;
-    // }
+  
 
     .navbar-nav {
 
@@ -463,6 +461,8 @@
 #sliderswip {
 
 
+
+
     body {
         position: relative;
         height: 100%;
@@ -695,295 +695,301 @@
     .container {
 
 
-
-        .swipers {
-
-            margin-left: -460px !important;
-        }
-
-
-        .swiper-button-prev {
-
-            background-color: #EF6C00;
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-        }
-
-
-        .swiper-button-prev:after {
-
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-        }
-
-
-
-        .swiper-button-next {
-
-            background-color: #EF6C00;
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-        }
-
-
-        .swiper-button-next:after {
-
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .swiper {
-
-            height: 400px;
-            background: #fff;
-
-
-
-            .swiper-paginations {
-
-                span {
-                    display: none;
-                }
-            }
-
-            // body {
-            //     position: relative;
-            //     height: 100%;
-            //     background: #eee;
-            //     font-family: $font-family_1;
-            //     font-size: 14px;
-            //     color: $color_1;
-            //     margin: 0;
-            //     padding: 0;
-            // }
-
-            .swiper-wrapper {
-
-                width: 245px;
-
-                .swiper-slide {
-                    width: 245px !important;
-                    height: 383px;
-                    box-shadow: rgba(0, 0, 0.1, 0.35) 0px 5px 15px;
-
-
-                    .carouselcard {
-
-                        position: relative;
-                        background-color: #fff;
-                        width: 245px;
-                        height: 380px;
-                        // box-shadow: rgba(0, 0, 0.1, 0.35) 0px 5px 15px;
-
-                        .img {
-
-                            width: 245px;
-                            height: 180px;
-
-                            a {
-
-                                img {
-                                    width: 180px;
-                                    height: 180px;
-                                    margin-left: 25px;
-
-                                }
-                            }
-                        }
-
-
-
-                        a {
-                            text-decoration: none;
-                            position: absolute;
-
-
-                            i {
-                                color: #333333;
-                                font-size: 24px;
-                                margin-top: 10px;
-                            }
-
-                        }
-
-                        & :hover {
-
-                            i {
-                                color: #ef6c00;
-                            }
-                        }
-
-                        .heart {
-                            top: 21px;
-                            left: 200px;
-                            display: none;
-                        }
-
-
-                        .eyes {
-                            top: 56px;
-                            left: 199px;
-                            display: none;
-
-                        }
-
-                        .refresh {
-
-                            top: 91px;
-                            left: 202px;
-                            display: none;
-                        }
-
-
-                        .addcart {
-                            height: 178px;
-                            width: 245px;
-                            position: relative;
-
-                            span {
-                                font-size: 14px;
-                                color: #A2A2A2;
-                                margin-left: 15px;
-                                border: none;
-                            }
-
-                            h5 {
-
-                                margin-left: 15px;
-                                font-size: 18px;
-                                color: #000000DE;
-                                border: none;
-                            }
-
-                            i {
-                                color: #FFA726;
-                                font-size: 17px;
-                            }
-
-                            .star {
-                                margin-left: 15px;
-                                border: none;
-                            }
-
-                            .dollar {
-
-                                margin-left: 45px;
-                                font-size: 19px;
-                                color: #000000DE;
-                                font-weight: 600;
-                                border: none;
-
-                            }
-
-                            .cardproductprice {
-                                font-size: 19px;
-                                color: #000000DE;
-                                font-weight: 600;
-                                margin-left: 0px;
-                                border: none;
-                            }
-
-
-
-
-                            .add-card-button {
-
-                                button {
-
-                                    margin-top: 35px;
-                                    width: 215.19px;
-                                    height: 43px;
-                                    background-color: #EF6C00;
-                                    color: white;
-                                    border: none;
-                                    margin-left: 15px;
-                                    padding: 0px 16px;
-
-
-                                    span {
-                                        font-size: 14px;
-                                        color: #FFFFFF;
-                                        font-weight: 600;
-                                        margin-left: 0px;
-                                        border: none;
-                                    }
-
-                                    i {
-                                        font-size: 18px;
-                                        color: #FFFFFF;
-                                        margin-left: 10px;
-                                    }
-
-
-
-                                }
-
-                                & :hover {
-
-                                    background-color: white;
-                                    border: 3px solid #ef6c00;
-
-                                    span {
-                                        color: #ef6c00;
-                                        border: none;
-                                    }
-
-                                    i {
-
-                                        color: #ef6c00;
-                                        border: none;
-                                    }
-                                }
-
-                            }
-
-
-                        }
-                    }
-
-
-                    & :hover {
-
-                        .heart {
-
-                            display: block;
-                        }
-
-                        .eyes {
-                            display: block;
-                        }
-
-                        .refresh {
-                            display: block;
-                        }
-                    }
-
-                }
-
-
-
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
+        .swiper-wrapper {
+            transition-duration: 150ms !important;
         }
 
     }
+
+    .swipers {
+
+        margin-left: -460px !important;
+    }
+
+
+
+    .swiper-button-prev {
+
+        background-color: #EF6C00;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+
+
+    .swiper-button-prev:after {
+
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+
+
+    .swiper-button-next {
+
+        background-color: #EF6C00;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+
+
+    .swiper-button-next:after {
+
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .swiper {
+
+        height: 400px;
+        background: #fff;
+
+
+
+        .swiper-paginations {
+
+            span {
+                display: none;
+            }
+        }
+
+        // body {
+        //     position: relative;
+        //     height: 100%;
+        //     background: #eee;
+        //     font-family: $font-family_1;
+        //     font-size: 14px;
+        //     color: $color_1;
+        //     margin: 0;
+        //     padding: 0;
+        // }
+
+        .swiper-wrapper {
+
+            width: 245px;
+
+            .swiper-slide {
+                width: 245px !important;
+                height: 383px;
+                box-shadow: rgba(0, 0, 0.1, 0.35) 0px 5px 15px;
+
+
+                .carouselcard {
+
+                    position: relative;
+                    background-color: #fff;
+                    width: 245px;
+                    height: 380px;
+                    // box-shadow: rgba(0, 0, 0.1, 0.35) 0px 5px 15px;
+
+                    .img {
+
+                        width: 245px;
+                        height: 180px;
+
+                        a {
+
+                            img {
+                                width: 180px;
+                                height: 180px;
+                                margin-left: 25px;
+
+                            }
+                        }
+                    }
+
+
+
+                    a {
+                        text-decoration: none;
+                        position: absolute;
+
+
+                        i {
+                            color: #333333;
+                            font-size: 24px;
+                            margin-top: 10px;
+                        }
+
+                    }
+
+                    & :hover {
+
+                        i {
+                            color: #ef6c00;
+                        }
+                    }
+
+                    .heart {
+                        top: 21px;
+                        left: 200px;
+                        display: none;
+                    }
+
+
+                    .eyes {
+                        top: 56px;
+                        left: 199px;
+                        display: none;
+
+                    }
+
+                    .refresh {
+
+                        top: 91px;
+                        left: 202px;
+                        display: none;
+                    }
+
+
+                    .addcart {
+                        height: 178px;
+                        width: 245px;
+                        position: relative;
+
+                        span {
+                            font-size: 14px;
+                            color: #A2A2A2;
+                            margin-left: 15px;
+                            border: none;
+                        }
+
+                        h5 {
+
+                            margin-left: 15px;
+                            font-size: 18px;
+                            color: #000000DE;
+                            border: none;
+                        }
+
+                        i {
+                            color: #FFA726;
+                            font-size: 17px;
+                        }
+
+                        .star {
+                            margin-left: 15px;
+                            border: none;
+                        }
+
+                        .dollar {
+
+                            margin-left: 45px;
+                            font-size: 19px;
+                            color: #000000DE;
+                            font-weight: 600;
+                            border: none;
+
+                        }
+
+                        .cardproductprice {
+                            font-size: 19px;
+                            color: #000000DE;
+                            font-weight: 600;
+                            margin-left: 0px;
+                            border: none;
+                        }
+
+
+
+
+                        .add-card-button {
+
+                            button {
+
+                                margin-top: 35px;
+                                width: 215.19px;
+                                height: 43px;
+                                background-color: #EF6C00;
+                                color: white;
+                                border: none;
+                                margin-left: 15px;
+                                padding: 0px 16px;
+
+
+                                span {
+                                    font-size: 14px;
+                                    color: #FFFFFF;
+                                    font-weight: 600;
+                                    margin-left: 0px;
+                                    border: none;
+                                }
+
+                                i {
+                                    font-size: 18px;
+                                    color: #FFFFFF;
+                                    margin-left: 10px;
+                                }
+
+
+
+                            }
+
+                            & :hover {
+
+                                background-color: white;
+                                border: 3px solid #ef6c00;
+
+                                span {
+                                    color: #ef6c00;
+                                    border: none;
+                                }
+
+                                i {
+
+                                    color: #ef6c00;
+                                    border: none;
+                                }
+                            }
+
+                        }
+
+
+                    }
+                }
+
+
+                & :hover {
+
+                    .heart {
+
+                        display: block;
+                    }
+
+                    .eyes {
+                        display: block;
+                    }
+
+                    .refresh {
+                        display: block;
+                    }
+                }
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
 }
+
 
 #stockproduct {
 
@@ -1423,140 +1429,5 @@
     }
 
 
-
-
-
-    // .logo-about {
-
-    //        width: 689px;
-    //         height: 178px;
-
-
-    //     a {
-    //         text-decoration: none;
-
-    //     }
-
-    //     p {
-    //        line-height: 24px;
-    //         color: #333;
-
-    //     }
-
-
-    // }
-
-    // .services{
-
-    //     margin-left: 29px;
-
-
-    //     .tel-box {
-
-    //        // display: flex;
-
-
-
-    //         .icon-text {
-
-    //             p {
-    //                 margin-left: 9px;
-    //             }
-
-    //         }
-
-
-    //     }
-
-
-    //     input {
-    //         padding: 0 65px 0 20px;
-    //         border: 1px solid #F5F5F5;
-    //         font-size: 15px;
-    //         height: 45px;
-    //         border-radius: 4px;
-
-    //     }
-
-    //     button {
-    //         width: 262px;
-    //         height: 45px;
-    //         margin-top: 20px;
-    //         color: #fff;
-    //         background-color: #EF6C00;
-    //         font-weight: 700;
-    //         font-size: 14px;
-    //         border-radius: 3px;
-    //     }
-
-    //     .h5 {
-    //         margin-left: 32px;
-    //     }
-
-    //     ul {
-
-    //         li {
-    //             list-style: none;
-
-    //             a {
-    //                 line-height: 31px;
-    //             }
-    //         }
-
-    //     }
-
-    //     .social-list {
-
-    //         margin-top:20px;
-    //         margin-left: -222px;
-
-
-
-    //         // display: flex;
-
-    //         // display: inline-flex
-
-
-    //         .social-list-inline {
-
-    //             // flex-direction: row;
-    //             // box-sizing: border-box;
-    //             // margin: 20px 0px 0px;
-    //             flex-direction: row;
-    //             box-sizing: border-box;
-    //             display: flex;
-
-
-
-    //             li {
-    //                 border: 1px solid #444;
-    //                 margin-right: 5px;
-    //                 width: 33px;
-    //                 height: 33px;
-    //                 text-align: center;
-    //                 border-radius: 50%;
-
-    //                 i {
-    //                     color: #383838;
-    //                     // align-items: center;
-    //                     // display: flex;
-    //                 }
-
-    //             }
-
-
-
-
-    //         }
-
-
-
-
-    //     }
-
-
-
-
-
-
 }
+

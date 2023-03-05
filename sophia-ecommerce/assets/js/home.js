@@ -154,189 +154,99 @@ $(document).ready(function () {
 
 
 	const tabLink = document.querySelectorAll(".tab-menu-link");
-const tabContent = document.querySelectorAll(".tab-bar-content");
+	const tabContent = document.querySelectorAll(".tab-bar-content");
 
-tabLink.forEach((item) => {
-  item.addEventListener("click", activeTab);
-});
+	tabLink.forEach((item) => {
+		item.addEventListener("click", activeTab);
+	});
 
-function activeTab(item) {
-  const btnTarget = item.currentTarget;
-  const content = btnTarget.dataset.content;
+	function activeTab(item) {
+		const btnTarget = item.currentTarget;
+		const content = btnTarget.dataset.content;
 
-  tabContent.forEach((item) => {
-    item.classList.remove("is-active");
-  });
+		tabContent.forEach((item) => {
+			item.classList.remove("is-active");
+		});
 
-  tabLink.forEach((item) => {
-    item.classList.remove("is-active");
-  });
+		tabLink.forEach((item) => {
+			item.classList.remove("is-active");
+		});
 
-  document.querySelector("#" + content).classList.add("is-active");
-  btnTarget.classList.add("is-active");
-}
+		document.querySelector("#" + content).classList.add("is-active");
+		btnTarget.classList.add("is-active");
+	}
 
+	//BASKET
 
-
-	// let cardsicons = document.querySelectorAll("#carouselcards .swiper-slide");
-
-	// cardsicons.forEach(cardsicon => {
-
-	// 	cardsicon.addEventListener("mouseover", function () {
-
-	// 		let refreshs = document.querySelectorAll(".refresh")
-
-	// 		for (const refresh of refreshs) {
-				
-	// 			refresh.classList.remove("d-none")
-
-	// 		}
+	let cardBtns = document.querySelectorAll("#carouselcards .swiper .swiper-wrapper button");
 
 
-	// 		let hearts = document.querySelectorAll(".heart");
-			
-	// 		for (const heart of hearts) {
-	// 			heart.classList.remove("d-none")
-	// 		}
+	let products = [];
 
-	// 		let eyess = document.querySelectorAll(".eyes");
-			
-	// 		for (const eyes of eyess) {
-	// 			eyes.classList.remove("d-none")
-	// 		}
+	if (localStorage.getItem("basket") != null) {
+		products = JSON.parse(localStorage.getItem("basket"));
+	}
+	cardBtns.forEach(btn => {
+		btn.addEventListener("click", function (e) {
+			e.preventDefault();
+
+			let productImage = this.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
+			//console.log(productImage);
+			let productName = this.parentNode.parentNode.firstElementChild.children[2].innerText;
+			//console.log(productName);
+			let productPrice = parseInt(this.parentNode.previousElementSibling.previousElementSibling.innerText);
+			//console.log(productPrice);
+			let productId = parseInt(this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id"));
+			//console.log(productId);
+			let existProduct = products.find(m => m.id == productId);
+
+			if (existProduct != undefined) {
+				existProduct.count += 1;
+				existProduct.price = productPrice * existProduct.count;
+			} else {
+				products.push({
+					id: productId,
+					name: productName,
+					img: productImage,
+					price: productPrice,
+					count: 1,
+
+				})
+			}
+
+			localStorage.setItem("basket", JSON.stringify(products));
+
+			getBasketCount(products);
+
+		})
+	})
+
+	function getBasketCount(arr) {
+		let sum = 0;
+		for (const item of arr) {
+			sum += item.count;
+		}
+		document.querySelector("#navdown .num").innerText = sum;
+	
+	};
+
+	getBasketCount(products);
+
+
+
+	//WISHLIST
+
+	// let eyesicon = document.querySelectorAll("#carouselcards .eyes");
+
+	// console.log(eyesicon);
+
+
+    // eyesicon.forEach(eyes => {
+		
+	// 	eyes.addEventListener("click",function(){
+
 
 	// 	})
+	});
 
 
-	// 	cardsicon.addEventListener("mouseleave", function () {
-
-	// 		let refresh = document.querySelector(".refresh")
-
-	// 		refresh.classList.add("d-none")
-
-	// 		let heart = document.querySelector(".heart");
-	// 		heart.classList.add("d-none")
-
-	// 		let eyes = document.querySelector(".eyes");
-	// 		eyes.classList.add("d-none")
-
-	// 	})
-
-	// });
-
-
-	//  cardsicon.forEach(element => {
-
-	// 	element.addEventListener("mouseover",function(){
-	// 		//cardsicon.addEventListener("mouseover", function () {
-
-	// 			let icon = document.querySelector(".heart");
-	// 			icon.classList.remove("d-none")
-	// 		})
-
-	// 		element.addEventListener("mouseleave", function () {
-
-	// 			let icon = document.querySelector(".heart");
-	// 			icon.classList.add("d-none")
-	// 		})
-
-	// 		element.addEventListener("mouseover", function () {
-
-	// 			let icon = document.querySelector(".eyes");
-	// 			icon.classList.remove("d-none")
-	// 		})
-
-	// 		element.addEventListener("mouseleave", function () {
-
-	// 			let icon = document.querySelector(".eyes");
-	// 			icon.classList.add("d-none")
-	// 		})
-
-	// 		element.addEventListener("mouseover", function () {
-
-	// 			let icon = document.querySelector(".refresh");
-	// 			icon.classList.remove("d-none")
-	// 		})
-
-	// 		element.addEventListener("mouseleave", function () {
-
-	// 			let icon = document.querySelector(".refresh");
-	// 			icon.classList.add("d-none")
-	// 		})
-
-
-	// 		let iconheart = document.querySelector(".heart i")
-
-	// 		iconheart.addEventListener("mouseover",function(){
-
-	// 			this.style.color ="#EF6C00";
-	// 		})
-
-	// 		iconheart.addEventListener("mouseleave",function(){
-
-	// 			this.style.color ="#333333";
-	// 		})
-
-	// 		let iconeyes = document.querySelector(".eyes i")
-
-	// 		iconeyes.addEventListener("mouseover",function(){
-
-	// 			this.style.color ="#EF6C00";
-	// 		})
-
-	// 		iconeyes.addEventListener("mouseleave",function(){
-
-	// 			this.style.color ="#333333";
-	// 		})
-
-	// 		let iconrefresh = document.querySelector(".refresh i")
-
-	// 		iconrefresh.addEventListener("mouseover",function(){
-
-	// 			this.style.color ="#EF6C00";
-	// 		})
-
-	// 		iconrefresh.addEventListener("mouseleave",function(){
-
-	// 			this.style.color ="#333333";
-	//	})
-	//	})
-
-	// });
-
-
-
-
-
-
-})
-
-
-
-// var swiper = new Swiper(".mySwiper", {
-// 	loop:true,
-// 	spaceBetween: 30,
-// 	centeredSlides: true,
-// 	autoplay: {
-// 	  delay: 2500,
-// 	  disableOnInteraction: false,
-// 	},
-// 	pagination: {
-// 	  el: ".swiper-pagination",
-// 	  clickable: true,
-// 	},
-// });
-
-// var swiper = new Swiper(".carousel", {
-//     slidesPerView: 4,
-//     spaceBetween: 30,
-//     centeredSlides: true,
-//     pagination: {
-//       el: ".swiper-paginations",
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     }
-// })
