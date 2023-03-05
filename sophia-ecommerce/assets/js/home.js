@@ -191,18 +191,17 @@ $(document).ready(function () {
 			e.preventDefault();
 
 			let productImage = this.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
-			//console.log(productImage);
+
 			let productName = this.parentNode.parentNode.firstElementChild.children[2].innerText;
-			//console.log(productName);
+
 			let productPrice = parseInt(this.parentNode.previousElementSibling.previousElementSibling.innerText);
-			//console.log(productPrice);
+
 			let productId = parseInt(this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id"));
-			//console.log(productId);
+			
 			let existProduct = products.find(m => m.id == productId);
 
 			if (existProduct != undefined) {
 				existProduct.count += 1;
-				existProduct.price = productPrice * existProduct.count;
 			} else {
 				products.push({
 					id: productId,
