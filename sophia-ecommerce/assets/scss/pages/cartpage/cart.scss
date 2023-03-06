@@ -501,17 +501,125 @@ hr {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 
+        thead{
+            border: 2px solid black;
+            border-top: none;
+            border-right: none;
+            border-left: none
+        }
+
+        .infoBasket {
+
+            margin-left: 500px;
+            width: 336px;
+            height: 30px;
+            border-radius: 50px;
+            background-color: #f33927;
+            // padding: 5px;
+            color: white;
+            border: none;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 3px;
+
+            span {
+                font-weight: 500;
+
+            }
+
+        }
+
+        .getShopping {
+            margin-left: 580px;
+            margin-bottom: 200px;
+            width: 182px;
+            height: 46px;
+            background-color: #ef6c00;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+
+            span {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .continueShopping{
+
+            margin-left: 50px;
+            margin-bottom: 200px;
+            width: 182px;
+            height: 46px;
+            background-color: #ef6c00;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+
+            span {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .grand{
+            margin-left: 665px;
+            font-size: 14px;
+            color: #000000DE;
+            font-weight: 500;
+        }
+
+        .granddollar{
+            font-weight:500;
+            margin-left: 5px;
+            color: #000000DE;
+        }
+
+        .grandtotalprice{
+            font-weight:500;
+            margin-left: 5px;
+            color: #000000DE;
+        }
+
+        .procedCheckout{
+            margin-left: 75px;
+            margin-bottom: 200px;
+            width: 182px;
+            height: 46px;
+            background-color: #ef6c00;
+            border: none;
+            color: white;
+            border-radius: 4px;
+
+            
+            span {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        
+
+        }
+
+
 
         img {
 
             width: 100px;
             height: 100px;
             margin-left: 58px;
+
         }
 
 
         td {
-
 
             span {
                 margin-left: 50px;
@@ -527,16 +635,16 @@ hr {
                 background-color: #eee;
                 height: 35px;
                 border: 1px solid #e5e5e5;
-              
+
 
             }
 
-          
-                
-     
+
+
+
             // input[type=number]::-webkit-inner-spin-button {
             //     -webkit-appearance: none;
-           // }
+            // }
 
 
         }
@@ -561,8 +669,6 @@ hr {
             padding-top: 10px;
             padding-bottom: 20px;
 
-
-
         }
 
         .hr {
@@ -571,11 +677,82 @@ hr {
             height: 1px;
         }
 
+        .price {
+            font-size: 21px;
+            font-weight: 500;
+            margin-left: 78px;
+            margin-top: 40px !important;
+        }
+
+        .zeros {
+            font-size: 21px;
+            font-weight: 500;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .tdname {
+            padding-top: 39px;
+            color: #000000DE;
+            padding-left: 21px;
+            
+            span{
+                color: #000000DE;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .tdprice {
+            padding-top: 35px;
+        }
+
+        .tdcount {
+            padding-top: 33px;
+            padding-left: 49px;
+        }
+
+        .tdtotal {
+            padding-top: 35px;
+            padding-right: 0px;
+
+            span {
+                color: #f33927;
+                font-size: 21px;
+                font-weight: 500;
+                padding-left: 21px;
+            }
+
+            .zeros {
+                font-size: 21px;
+                font-weight: 500;
+                padding: 0px;
+                margin: 0px;
+            }
 
 
+
+        }
     }
 
+    .tdaction {
+        padding-top: 40px;
+
+        i{
+
+            margin-left: 92px;
+            font-size: 18px;
+        }
+    }
+
+
+
+
+
+
 }
+
+
 
 
 

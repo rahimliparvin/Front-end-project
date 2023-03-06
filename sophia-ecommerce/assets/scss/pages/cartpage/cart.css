@@ -341,6 +341,89 @@ hr {
 #basket .tablebasket {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+#basket .tablebasket thead {
+  border: 2px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+#basket .tablebasket .infoBasket {
+  margin-left: 500px;
+  width: 336px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #f33927;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 3px;
+}
+#basket .tablebasket .infoBasket span {
+  font-weight: 500;
+}
+#basket .tablebasket .getShopping {
+  margin-left: 580px;
+  margin-bottom: 200px;
+  width: 182px;
+  height: 46px;
+  background-color: #ef6c00;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#basket .tablebasket .getShopping span {
+  font-size: 14px;
+  font-weight: 500;
+}
+#basket .tablebasket .continueShopping {
+  margin-left: 50px;
+  margin-bottom: 200px;
+  width: 182px;
+  height: 46px;
+  background-color: #ef6c00;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#basket .tablebasket .continueShopping span {
+  font-size: 14px;
+  font-weight: 500;
+}
+#basket .tablebasket .grand {
+  margin-left: 665px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-weight: 500;
+}
+#basket .tablebasket .granddollar {
+  font-weight: 500;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.8705882353);
+}
+#basket .tablebasket .grandtotalprice {
+  font-weight: 500;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.8705882353);
+}
+#basket .tablebasket .procedCheckout {
+  margin-left: 75px;
+  margin-bottom: 200px;
+  width: 182px;
+  height: 46px;
+  background-color: #ef6c00;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+#basket .tablebasket .procedCheckout span {
+  font-size: 14px;
+  font-weight: 500;
+}
 #basket .tablebasket img {
   width: 100px;
   height: 100px;
@@ -375,6 +458,58 @@ hr {
   color: black;
   width: 90%;
   height: 1px;
+}
+#basket .tablebasket .price {
+  font-size: 21px;
+  font-weight: 500;
+  margin-left: 78px;
+  margin-top: 40px !important;
+}
+#basket .tablebasket .zeros {
+  font-size: 21px;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+}
+#basket .tablebasket .tdname {
+  padding-top: 39px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  padding-left: 21px;
+}
+#basket .tablebasket .tdname span {
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-size: 14px;
+  font-weight: 500;
+}
+#basket .tablebasket .tdprice {
+  padding-top: 35px;
+}
+#basket .tablebasket .tdcount {
+  padding-top: 33px;
+  padding-left: 49px;
+}
+#basket .tablebasket .tdtotal {
+  padding-top: 35px;
+  padding-right: 0px;
+}
+#basket .tablebasket .tdtotal span {
+  color: #f33927;
+  font-size: 21px;
+  font-weight: 500;
+  padding-left: 21px;
+}
+#basket .tablebasket .tdtotal .zeros {
+  font-size: 21px;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+}
+#basket .tdaction {
+  padding-top: 40px;
+}
+#basket .tdaction i {
+  margin-left: 92px;
+  font-size: 18px;
 }
 
 #footer {

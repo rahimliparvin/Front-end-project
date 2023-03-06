@@ -178,6 +178,9 @@ $(document).ready(function () {
 
 	//BASKET
 
+
+	//takeGrandTotalPrice();
+
 	let cardBtns = document.querySelectorAll("#carouselcards .swiper .swiper-wrapper button");
 
 
@@ -185,7 +188,29 @@ $(document).ready(function () {
 
 	if (localStorage.getItem("basket") != null) {
 		products = JSON.parse(localStorage.getItem("basket"));
+
+		function takeGrandTotalPrice() {
+				
+			let spangrandtotalprice = document.querySelector(".minicart .spangrandtotalprice");
+
+			let products = JSON.parse(localStorage.getItem("basket"));
+		
+			let sum = 0;
+		
+			products.forEach(product => {
+			
+			sum +=product.total;
+		
+			});
+		
+			spangrandtotalprice.innerText = sum;
+		   }
+
+        takeGrandTotalPrice();
 	}
+
+	
+
 	cardBtns.forEach(btn => {
 		btn.addEventListener("click", function (e) {
 			e.preventDefault();
@@ -202,6 +227,7 @@ $(document).ready(function () {
 
 			if (existProduct != undefined) {
 				existProduct.count += 1;
+				existProduct.total = existProduct.count * existProduct.price
 			} else {
 				products.push({
 					id: productId,
@@ -209,29 +235,93 @@ $(document).ready(function () {
 					img: productImage,
 					price: productPrice,
 					count: 1,
+					total: productPrice * 1
 
 				})
 			}
 
 			localStorage.setItem("basket", JSON.stringify(products));
 
+			takeGrandTotalPrice();
+
+			});
+
+
+			function takeGrandTotalPrice() {
+				
+			 let spangrandtotalprice = document.querySelector(".minicart .spangrandtotalprice");
+ 
+			 let products = JSON.parse(localStorage.getItem("basket"));
+		 
+			 let sum = 0;
+		 
+			 products.forEach(product => {
+			 
+			 sum +=product.total;
+		 
+			 });
+		 
+			 spangrandtotalprice.innerText = sum;
+			}
+		
+
 			getBasketCount(products);
 
 		})
 	})
 
+
 	function getBasketCount(arr) {
-		let sum = 0;
-		for (const item of arr) {
-			sum += item.count;
-		}
-		document.querySelector("#navdown .num").innerText = sum;
-	
+		
+		document.querySelector("#navdown .num").innerText = arr.length;
+		
 	};
 
-	getBasketCount(products);
 
 
+
+
+
+
+
+
+    let products =  JSON.parse(localStorage.getItem("basket"));
+
+	let ul = document.querySelector(".ullist")
+
+	products.forEach(product => {
+
+        ul.innerHTML += `<tr data-id="${product.id}" >
+    <td><span class="tdname">${product.name}</span><i class="fa-solid fa-trash trash"></i></td><br>
+	<td><span class="tdcount">${product.count}</span></td> X <td><span class="tdprice">${product.price}</span></td>
+	<hr>
+    
+    </tr>`
+
+	let prag =  document.querySelector(".ullist p");
+
+	prag.classList.add("d-none");
+
+	let subtotal  = document.querySelector(".subtotal");
+
+	subtotal.classList.remove("d-none");
+
+
+    });
+
+
+
+// 	 //CHECK CARD
+
+	 let cart = document.querySelector(".minicart");
+
+	 let getBasketProductList = document.querySelector(".getBasketProductList");
+ 
+	 $(cart).click(function(){
+   $(getBasketProductList).toggle();
+ 
+	 });
+ 
 
 	//WISHLIST
 
@@ -245,7 +335,7 @@ $(document).ready(function () {
 	// 	eyes.addEventListener("click",function(){
 
 
-	// 	})
-	});
+	//	})
+	//});
 
 

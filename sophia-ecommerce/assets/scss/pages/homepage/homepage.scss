@@ -2,7 +2,7 @@
 
     background-color: #222222;
 
-  
+
 
     .navbar-nav {
 
@@ -277,6 +277,102 @@
 
         }
 
+    }
+
+}
+
+
+.getBasketProductList {
+
+    width: 239px;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    right: 1px;
+    top: 130px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+    .border {
+        width: inherit;
+        height: 4px;
+        background-color: gray;
+        border-radius: 5px;
+        margin-bottom: 10px
+    }
+
+    .ullist {
+
+       padding: 0px;
+        position: relative;
+
+
+        p {
+            margin-left: 10px;
+        }
+
+        
+
+        .trash {
+           float: right;
+            margin-right: 10px;
+            margin-top: 5px;
+            color: #C3C3C3;
+
+            & :hover{
+                color: #ef6c00;
+            }
+            
+        }
+
+        
+
+        .tdcount{
+            margin-left: 15px;
+
+        }
+
+
+        .tdname {
+
+            font-size: 16px;
+            color: #333333;
+            font-weight: 500;
+            margin-left: 15px;
+            margin-right: 37px;
+        }
+    }
+
+    .checkcard {
+
+        span {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .itemcount {
+            margin-left: 65px;
+            margin-right: 5px;
+        }
+    }
+
+    hr {
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    .subtotal {
+        // padding-left: 10px;
+        // padding-right: 10px;
+
+        .stotal {
+            margin-right: 85px;
+        }
     }
 
 }
@@ -1430,4 +1526,3 @@
 
 
 }
-

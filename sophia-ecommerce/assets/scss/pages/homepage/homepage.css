@@ -193,6 +193,70 @@
   padding-bottom: 1px;
 }
 
+.getBasketProductList {
+  width: 239px;
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  right: 1px;
+  top: 130px;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.getBasketProductList .border {
+  width: inherit;
+  height: 4px;
+  background-color: gray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.getBasketProductList .ullist {
+  padding: 0px;
+  position: relative;
+}
+.getBasketProductList .ullist p {
+  margin-left: 10px;
+}
+.getBasketProductList .ullist .trash {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+  color: #C3C3C3;
+}
+.getBasketProductList .ullist .trash :hover {
+  color: #ef6c00;
+}
+.getBasketProductList .ullist .tdcount {
+  margin-left: 15px;
+}
+.getBasketProductList .ullist .tdname {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-right: 37px;
+}
+.getBasketProductList .checkcard span {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.getBasketProductList .checkcard .itemcount {
+  margin-left: 65px;
+  margin-right: 5px;
+}
+.getBasketProductList hr {
+  width: 200px;
+  margin-left: 10px;
+}
+.getBasketProductList .subtotal .stotal {
+  margin-right: 85px;
+}
+
 #navexp {
   height: 68px;
   background-color: #F5F5F5;
