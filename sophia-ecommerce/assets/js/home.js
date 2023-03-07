@@ -183,37 +183,45 @@ $(document).ready(function () {
 
 	let cardBtns = document.querySelectorAll("#carouselcards .swiper .swiper-wrapper button");
 
-
 	let products = [];
 
 	if (localStorage.getItem("basket") != null) {
 		products = JSON.parse(localStorage.getItem("basket"));
+		let prag = document.querySelector(".ullist p");
+		prag.classList.add("d-none");
+		creatProductList(products);
 
 		function takeGrandTotalPrice() {
-				
+
 			let spangrandtotalprice = document.querySelector(".minicart .spangrandtotalprice");
 
 			let products = JSON.parse(localStorage.getItem("basket"));
-		
-			let sum = 0;
-		
-			products.forEach(product => {
-			
-			sum +=product.total;
-		
-			});
-		
-			spangrandtotalprice.innerText = sum;
-		   }
 
-        takeGrandTotalPrice();
+			let sum = 0;
+
+			products.forEach(product => {
+
+				sum += product.total;
+
+			});
+
+			spangrandtotalprice.innerText = sum;
+		}
+
+		takeGrandTotalPrice();
 	}
 
+
 	
+
 
 	cardBtns.forEach(btn => {
 		btn.addEventListener("click", function (e) {
 			e.preventDefault();
+
+
+
+
 
 			let productImage = this.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
 
@@ -222,13 +230,30 @@ $(document).ready(function () {
 			let productPrice = parseInt(this.parentNode.previousElementSibling.previousElementSibling.innerText);
 
 			let productId = parseInt(this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id"));
-			
+
+			if (JSON.parse(localStorage.getItem("basket")) != null) {
+				products = JSON.parse(localStorage.getItem("basket"))
+			}
+
 			let existProduct = products.find(m => m.id == productId);
+
+
 
 			if (existProduct != undefined) {
 				existProduct.count += 1;
-				existProduct.total = existProduct.count * existProduct.price
+				existProduct.total = existProduct.count * existProduct.price;
+				let tdproductcounts = document.querySelectorAll(".tdcount");
+
+
+				tdproductcounts.forEach(tdproductcount => {
+					if (tdproductcount.getAttribute("data-id") == productId) {
+						tdproductcount.innerText = existProduct.count;
+					}
+				});
+
 			} else {
+
+
 				products.push({
 					id: productId,
 					name: productName,
@@ -238,104 +263,222 @@ $(document).ready(function () {
 					total: productPrice * 1
 
 				})
+
+				creatProductList(products);
 			}
+
+			getBasketCount(products);
 
 			localStorage.setItem("basket", JSON.stringify(products));
 
 			takeGrandTotalPrice();
 
+
+			let trashicons = document.querySelectorAll(".ullist .trash");
+
+			trashicons.forEach(trashicon => {
+
+
+
+				trashicon.addEventListener("click", function () {
+
+
+
+					let products = JSON.parse(localStorage.getItem("basket"));
+
+
+
+					let filtredproduct = products.find(m => m.id == trashicon.getAttribute("data-id"));
+
+
+					let prod = products.indexOf(filtredproduct);
+
+					products.splice(prod, 1);
+
+					let num = document.querySelector(".num");
+
+					let itemcount = document.querySelector(".itemcount");
+
+					num.innerText = products.length;
+
+					itemcount.innerText = products.length;
+
+
+
+					localStorage.setItem("basket", JSON.stringify(products));
+
+
+					takeGrandTotalPrice();
+
+					this.parentNode.remove();
+
+					let res = localStorage.getItem("basket");
+
+					if (res.length == 0) {
+						localStorage.clear()
+						
+				    let subtotalprice = document.querySelector(".subtotalprice");
+
+				    subtotalprice.classList.add("d-none");
+
+					}
+
+				})
+
+
+
 			});
 
 
-			function takeGrandTotalPrice() {
-				
-			 let spangrandtotalprice = document.querySelector(".minicart .spangrandtotalprice");
- 
-			 let products = JSON.parse(localStorage.getItem("basket"));
-		 
-			 let sum = 0;
-		 
-			 products.forEach(product => {
-			 
-			 sum +=product.total;
-		 
-			 });
-		 
-			 spangrandtotalprice.innerText = sum;
-			}
-		
 
-			getBasketCount(products);
 
-		})
+		});
+
+
+
+
+
+
+		function takeGrandTotalPrice() {
+
+
+			let subtotalprice = document.querySelector(".subtotalprice");
+			let spangrandtotalprice = document.querySelector(".minicart .spangrandtotalprice");
+
+			let products = JSON.parse(localStorage.getItem("basket"));
+
+			let sum = 0;
+
+			products.forEach(product => {
+
+				sum += product.total;
+
+			});
+
+			spangrandtotalprice.innerText = sum;
+
+			subtotalprice.innerText = sum;
+
+
+		}
+
+
+		getBasketCount(products);
+
 	})
 
 
+
+
+
+
+
+
+	//Basketcount assigned minicart sup
 	function getBasketCount(arr) {
-		
+
 		document.querySelector("#navdown .num").innerText = arr.length;
-		
+
 	};
 
 
 
 
+	//PRODUCTLIST MAKE IN CHECKCARD 
+
+	function creatProductList(arr) {
+
+		let ul = document.querySelector(".ullist");
+		ul.innerHTML = "";
+
+		arr.forEach(item => {
+
+			// 	ul.innerHTML += `<tr data-id="${item.id}" >
+			// <td><span data-id="${item.id}" class="tdname">${item.name}</span><i data-id="${item.id}" class="fa-solid fa-trash trash"></i></td><br>
+			// <td><span data-id="${item.id}" class="tdcount">${item.count}</span></td> X <td><span data-id="${item.id}" class="tdprice">${item.price}</span></td>
+			// <hr>
+			// </tr>`
+
+			ul.innerHTML += `<li data-id="${item.id}"><span class="tdname">${item.name}</span><i data-id="${item.id}" class="fa-solid fa-trash trash"></i><br><span data-id="${item.id}" class="tdcount">${item.count}</span> X <span data-id="${item.id}" class="tdprice">${item.price}</span></li>`;
 
 
 
 
 
-    let products =  JSON.parse(localStorage.getItem("basket"));
+			let itemscount = document.querySelector(".itemcount");
 
-	let ul = document.querySelector(".ullist")
-
-	products.forEach(product => {
-
-        ul.innerHTML += `<tr data-id="${product.id}" >
-    <td><span class="tdname">${product.name}</span><i class="fa-solid fa-trash trash"></i></td><br>
-	<td><span class="tdcount">${product.count}</span></td> X <td><span class="tdprice">${product.price}</span></td>
-	<hr>
-    
-    </tr>`
-
-	let prag =  document.querySelector(".ullist p");
-
-	prag.classList.add("d-none");
-
-	let subtotal  = document.querySelector(".subtotal");
-
-	subtotal.classList.remove("d-none");
+			itemscount.innerText = arr.length;
 
 
-    });
+			let subtotal = document.querySelector(".subtotal");
+
+			subtotal.classList.remove("d-none");
+
+			let subtotalprice = document.querySelector(".subtotalprice");
+
+			subtotalprice.classList.remove("d-none");
 
 
 
-// 	 //CHECK CARD
+		});
 
-	 let cart = document.querySelector(".minicart");
-
-	 let getBasketProductList = document.querySelector(".getBasketProductList");
- 
-	 $(cart).click(function(){
-   $(getBasketProductList).toggle();
- 
-	 });
- 
-
-	//WISHLIST
-
-	// let eyesicon = document.querySelectorAll("#carouselcards .eyes");
-
-	// console.log(eyesicon);
+	}
 
 
-    // eyesicon.forEach(eyes => {
-		
-	// 	eyes.addEventListener("click",function(){
 
 
-	//	})
-	//});
+
+	// 	 //CHECK CARD
+
+	let cart = document.querySelector(".minicart");
+
+	let getBasketProductList = document.querySelector(".getBasketProductList");
+
+	$(cart).click(function () {
+		$(getBasketProductList).toggle();
+
+
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
+
+
+
+
 
 
