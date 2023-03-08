@@ -238,7 +238,10 @@
   font-weight: 500;
   margin-left: 15px;
 }
-.getBasketProductList .checkcard span {
+.getBasketProductList .checkcard a {
+  text-decoration: none;
+}
+.getBasketProductList .checkcard a span {
   font-size: 14px;
   color: #333;
   font-weight: 500;

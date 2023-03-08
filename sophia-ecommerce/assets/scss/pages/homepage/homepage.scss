@@ -348,12 +348,20 @@
 
     .checkcard {
 
-        span {
-            font-size: 14px;
-            color: #333;
-            font-weight: 500;
-            margin-left: 10px;
+
+        a{
+
+           text-decoration: none;
+
+            span {
+                font-size: 14px;
+                color: #333;
+                font-weight: 500;
+                margin-left: 10px;
+            }
         }
+
+       
 
         .itemcount {
             margin-left: 65px;

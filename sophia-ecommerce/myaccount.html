@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/scss/pages/cartpage/cart.css">
+    <link rel="stylesheet" href="../sophia-ecommerce/assets/scss/pages/myaccountpage/myaccount.css">
     <title>Document</title>
 </head>
 
@@ -51,12 +51,11 @@
                                             <li><img src="./assets/img/russian flag.svg" alt=""><span>Russian</span>
                                             </li>
                                             <li><img src="./assets/img/TurkishFlag.svg" alt=""><span>Turkish</span></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
-                                    
                                 </ul>
                                 <div class="lang" style="margin-left: 50px;">
-                                     <ul class="dropdown-menu dropdown-secondmenu">
+                                    <!-- <ul class="dropdown-menu dropdown-secondmenu">
                                         <li><img src="./assets/img/english flag.svg" alt=""><span>English</span>
                                         </li>
                                         <li><img src="./assets/img/german flag.svg" alt=""><span>German</span></li>
@@ -65,16 +64,16 @@
                                         </li>
                                         <li><img src="./assets/img/TurkishFlag.svg" alt=""><span>Turkish</span></li>
                                     </ul> -->
-                            </div>
-                            <div class="likelogin">
-                                <a href=""><i class="fa-regular fa-heart"></i><span>WISHLIST</span></a> <a href=""><i
-                                        class="fa-solid fa-arrows-rotate"></i><span>COMPARE</span></a><a href=""><i
-                                        class="fa-solid fa-user"></i><span>My Account</span></a>
+                                </div>
+                                <div class="likelogin">
+                                    <a href=""><i class="fa-regular fa-heart"></i><span>WISHLIST</span></a> <a
+                                        href=""><i class="fa-solid fa-arrows-rotate"></i><span>COMPARE</span></a><a
+                                        href=""><i class="fa-solid fa-user"></i><span>My Account</span></a>
+                                </div>
                             </div>
                         </div>
+                    </nav>
                 </div>
-                </nav>
-            </div>
             </div>
         </section>
         <section id="navdown">
@@ -82,7 +81,7 @@
                 <div class="row">
                     <div class="col-lg-9">
                         <div class="navdowninfo">
-                           <a href="homepage.html">  <img src="./assets/img/sofia-logo.png" alt=""></a>
+                            <a href="homepage.html"> <img src="./assets/img/sofia-logo.png" alt=""></a>
                             <div class="searching"><input placeholder="Type to search..." type="search"><button
                                     type="submit">Search</button></div>
                         </div>
@@ -97,7 +96,8 @@
                                 <p>02(981)336 111</p>
                             </div>
                             <div class="minicart">
-                                <i class="fa-solid fa-cart-shopping"></i> <span>$0.00</span>
+                                <i class="fa-solid fa-cart-shopping"></i> <span>$</span><span
+                                    class="spangrandtotalprice">0</span><span>.00</span>
                                 <div class="minicartcount"><span class="num">0</span></div>
                             </div>
                         </div>
@@ -105,7 +105,18 @@
                 </div>
             </div>
         </section>
+        <div class="getBasketProductList" style="display: none">
+            <div class="border"></div>
+            <div class="checkcard"> <span>CHECK CARD</span><span class="itemcount">0</span><span>ITEM</span></div>
+            <hr>
 
+            <ul class="ullist">
+                <p>Please add product</p>
+            </ul>
+            <div class="subtotal d-none"><span class="stotal">Subtotal:</span> <span>$</span><span
+                    class="subtotalprice">0</span>.00</div>
+
+        </div>
         <section id="navexp">
             <div class="container">
                 <div class="nav-expend">
@@ -158,62 +169,65 @@
 
     <main>
 
-        <section id="cartup">
 
+
+        <section id="myaccountpagebegin">
             <div class="container">
-                <div class="carthome">
-                    <div class="cart">
-                        <h5>CART</h5>
+                <div class="accountpageleavehomepage">
+                    <div class="account">
+                        <h4>MY ACCOUNT</h4>
                     </div>
-                    <div class="home">
-                        <a href="homepage.html">HOME</a> / <a href="cart.html">CART</a>
+                    <div class="homeaccount"><a href="homepage.html">HOME</a> / <a href="myaccount.html">MY ACCOUNT</a>
                     </div>
                 </div>
+            </div>
+            <hr>
+        </section>
 
+        <section id="loginRegister">
+            <div class="container">
+                <div class="logreg">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 ">
+                            <div class="login">
+                                <h2>Login</h2>
+                                <form>
+
+                                    <div class="group">
+                                        <input type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Name</label>
+                                    </div>
+
+                                    <div class="group">
+                                        <input type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Email</label>
+                                    </div>
+
+                                    <button type="submit" class="loginsubmit">Login</button>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+
+                            <div class="register">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <hr>
-
-        <section id="basket">
 
 
-            <div class="container">
-                <div class="alert alert-warning d-none" role="alert">
-                    Basket products not found.
-                </div>
-                <div>
-                    <div class="tablebasket">
 
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col-2">Action</th>
-                                </tr>
-                                
-                                <div class="hr"></div>
-
-                            </thead>
-                            
-                            <tbody>
-                            </tbody>
-                        </table>
-
-                        <button class="infoBasket d-none"><span>YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</span></button><br>
-                        <a href=""><button class="getShopping d-none"><span>Continue shopping</span></button></a>
-                        <button class="continueShopping"><span>Continue shopping</span></button><span class="grand">Grand total:</span><span class="granddollar">$</span><span class="grandtotalprice"></span><button class="procedCheckout"><span>Proceed To Checkout</span></button>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
 
     </main>
+
 
     <footer>
         <section id="footer">
@@ -327,7 +341,6 @@
 
 
 
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -346,7 +359,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="https://kit.fontawesome.com/e29b1b43d1.js" crossorigin="anonymous"></script>
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
@@ -354,7 +366,7 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
 
-    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/about.js"></script>
 </body>
 
 </html>
