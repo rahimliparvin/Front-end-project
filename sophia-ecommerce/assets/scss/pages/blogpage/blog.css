@@ -240,198 +240,245 @@
   position: relative;
 }
 
-#myaccountpagebegin .accountpageleavehomepage {
+#blogpagebegin .blogpageleavehomepage {
   display: flex;
   justify-content: space-between;
   height: 58px;
   width: 100%;
 }
-#myaccountpagebegin .accountpageleavehomepage .account {
+#blogpagebegin .blogpageleavehomepage .blog {
   margin-top: 26px;
   margin-left: 10px;
 }
-#myaccountpagebegin .accountpageleavehomepage .account h4 {
+#blogpagebegin .blogpageleavehomepage .blog h4 {
   font-size: 14px;
   color: #333333;
 }
-#myaccountpagebegin .accountpageleavehomepage .homeaccount {
+#blogpagebegin .blogpageleavehomepage .homeblog {
   margin-top: 21px;
   margin-right: 10px;
 }
-#myaccountpagebegin .accountpageleavehomepage .homeaccount a {
+#blogpagebegin .blogpageleavehomepage .homeblog a {
   font-size: 14px;
   text-decoration: none;
   color: #555;
   font-weight: 500;
 }
 
-#loginRegister .logreg {
-  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
-  padding: 15px;
-  margin-top: 60px;
-  /* basic stylings ------------------------------------------ */
-  /* form starting stylings ------------------------------- */
-  /* LABEL ======================================= */
-  /* active state */
-  /* BOTTOM BARS ================================= */
-  /* active state */
-  /* HIGHLIGHTER ================================== */
-  /* active state */
-  /* ANIMATIONS ================ */
+#blog .col-lg-8 {
+  padding-right: 0px;
 }
-#loginRegister .logreg .underline {
-  width: 600px;
-  height: 30px;
+#blog .col-lg-8 .cardblog {
+  margin-top: 50px;
+  display: flex;
+  background-color: white;
+}
+#blog .col-lg-8 .cardblog .cardimg {
+  width: 438px;
+  height: 247px;
+}
+#blog .col-lg-8 .cardblog .cardimg a {
+  text-decoration: none;
+}
+#blog .col-lg-8 .cardblog .cardimg a img {
+  width: 100%;
+  height: 100%;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo {
+  width: 448px;
+  height: 252px;
+  margin-left: 20px;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo h4 {
+  font-size: 24px;
+  margin-bottom: 7px;
+  color: #383838;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo .ulblog {
+  display: flex;
+  padding: 0px;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo .ulblog li {
+  list-style: none;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo .ulblog li button {
+  border: none;
+  background-color: white;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo .ulblog li button span {
+  font-size: 14px;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo .ulblog li button span i {
+  font-size: 14px;
+  color: #ef6c00;
+  margin-right: 3px;
+}
+#blog .col-lg-8 .cardblog .cardbloginfo p {
+  line-height: 26px;
+  margin-top: 16px;
+  font-size: 16px;
+  color: #333333;
+}
+#blog .col-lg-4 {
+  padding: 0px;
+}
+#blog .col-lg-4 .searchinput {
+  position: relative;
+}
+#blog .col-lg-4 .searchinput input {
+  width: 311px;
+  height: 54px;
+  margin-left: 45px;
+  margin-top: 50px;
+  border: 1px solid #e5e5e5;
+  padding-left: 15px;
+  outline: none;
+}
+#blog .col-lg-4 .searchinput button {
+  width: 64px;
+  height: 54px;
+  background-color: #ef6c00;
+  position: absolute;
+  border: none;
+  margin-top: 50px;
+}
+#blog .col-lg-4 .searchinput button i {
+  color: white;
+}
+#blog .col-lg-4 .latesnews {
+  width: 375px;
+  padding-left: 44px;
+}
+#blog .col-lg-4 .latesnews h4 {
+  padding: 0px;
+  height: 17px;
+  margin-top: 23px;
+}
+#blog .col-lg-4 .latesnews .underlines {
+  width: 375px;
   display: flex;
 }
-#loginRegister .logreg .underline .firstunderline {
-  width: 8%;
+#blog .col-lg-4 .latesnews .underlines .firstline {
+  width: 60px;
   color: black;
-  height: 6px;
   opacity: 1;
+  border: 1px solid black;
+  height: 1px;
 }
-#loginRegister .logreg .underline .secondunderline {
-  width: 92%;
-  color: #757575;
-  height: 6px;
+#blog .col-lg-4 .latesnews .underlines .secondline {
+  width: 345px;
+  height: 4px;
+  color: #555555;
+  margin-top: 16px;
 }
-#loginRegister .logreg * {
-  box-sizing: border-box;
-}
-#loginRegister .logreg body {
-  background: url(https://scotch.io/wp-content/uploads/2014/07/61.jpg);
-}
-#loginRegister .logreg h2 {
-  margin-top: 20px;
-}
-#loginRegister .logreg .group {
-  position: relative;
+#blog .col-lg-4 .news {
+  margin-top: 10px;
+  display: flex;
   margin-bottom: 25px;
 }
-#loginRegister .logreg input {
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 600px;
-  border: none;
-  border-bottom: 1px solid #757575;
+#blog .col-lg-4 .news .img {
+  width: 113px;
+  height: 64px;
 }
-#loginRegister .logreg input:focus {
-  outline: none;
+#blog .col-lg-4 .news .img img {
+  width: 100%;
+  height: 100%;
 }
-#loginRegister .logreg label {
-  color: #777;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
+#blog .col-lg-4 .news .newsHeadlines {
+  margin-left: 15px;
 }
-#loginRegister .logreg .please {
-  color: #f44336;
-}
-#loginRegister .logreg input:focus ~ label,
-#loginRegister .logreg input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #f44336;
-}
-#loginRegister .logreg .bar {
-  position: relative;
-  display: block;
-  width: 600px !important;
-}
-#loginRegister .logreg .bar:before,
-#loginRegister .logreg .bar:after {
-  content: "";
-  height: 1px;
-  width: 0;
-  position: absolute;
-  background: #f44336 !important;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-#loginRegister .logreg .bar:before {
-  left: 50%;
-}
-#loginRegister .logreg .bar:after {
-  right: 50%;
-}
-#loginRegister .logreg input:focus ~ .bar:before,
-#loginRegister .logreg input:focus ~ .bar:after {
-  width: 50%;
-}
-#loginRegister .logreg .highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-#loginRegister .logreg .highlighttext {
-  position: absolute;
-  height: 80%;
-  width: 100px;
-  top: 5%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-#loginRegister .logreg .loginsubmit {
-  width: 96px;
-  height: 46px;
-  background-color: #ef6c00;
-  border: none;
-  box-sizing: border-box;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  overflow: visible;
-  transform: translate3d(0, 0, 0);
-  color: white;
-  margin-bottom: 30px;
-}
-#loginRegister .logreg input:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
-}
-@keyframes inputHighlighter {
-  from {
-    background: #f44336 !important;
-  }
-  to {
-    width: 0;
-    background: transparent;
-    border: none;
-  }
-}
-#loginRegister .logreg .register .underline {
-  width: 600px;
-  height: 30px;
-  display: flex;
+#blog .col-lg-4 .news .newsHeadlines h5 {
+  color: #333333;
+  font-size: 16px;
   margin-bottom: 5px;
 }
-#loginRegister .logreg .register .underline .firstunderline {
-  width: 8%;
+#blog .col-lg-4 .textWidget {
+  width: 375px;
+  padding-left: 44px;
+  margin-top: 15px;
+}
+#blog .col-lg-4 .textWidget h4 {
+  padding: 0px;
+  height: 17px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+#blog .col-lg-4 .textWidget .underlines {
+  width: 375px;
+  display: flex;
+  margin-bottom: 10px;
+}
+#blog .col-lg-4 .textWidget .underlines .firstline {
+  width: 60px;
   color: black;
-  height: 6px;
   opacity: 1;
+  border: 1px solid black;
+  height: 1px;
 }
-#loginRegister .logreg .register .underline .secondunderline {
-  width: 92%;
-  color: #757575;
-  height: 6px;
+#blog .col-lg-4 .textWidget .underlines .secondline {
+  width: 345px;
+  height: 4px;
+  color: #555555;
+  margin-top: 16px;
 }
-#loginRegister .logreg .register .personaldatainfo {
-  font-size: 15px;
+#blog .col-lg-4 .textWidget p {
+  width: 375px;
+  font-size: 14.5px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+#blog .col-lg-4 .tagswidget {
+  width: 375px;
+  padding-left: 44px;
+  margin-top: 15px;
+}
+#blog .col-lg-4 .tagswidget h4 {
+  padding: 0px;
+  height: 17px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+#blog .col-lg-4 .tagswidget .underlines {
+  width: 375px;
+  display: flex;
+  margin-bottom: 10px;
+}
+#blog .col-lg-4 .tagswidget .underlines .firstline {
+  width: 60px;
+  color: black;
+  opacity: 1;
+  border: 1px solid black;
+  height: 1px;
+}
+#blog .col-lg-4 .tagswidget .underlines .secondline {
+  width: 345px;
+  height: 4px;
+  color: #555555;
+  margin-top: 16px;
+}
+#blog .col-lg-4 .tagswidget a {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  text-transform: uppercase;
+  color: #787878;
+  font-weight: 600;
+}
+#blog .col-lg-4 .tagswidget a span {
+  font-size: 14px;
 }
 
 #footer {
@@ -572,4 +619,4 @@
   font-size: 15px;
   line-height: 32px;
   color: #333;
-}/*# sourceMappingURL=myaccount.css.map */
+}/*# sourceMappingURL=blog.css.map */

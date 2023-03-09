@@ -138,6 +138,8 @@ $(document).ready(function () {
 		},
 	});
 
+
+	//carousel
 	var swiper = new Swiper(".carousel", {
 		slidesPerView: 4,
 		spaceBetween: 30,
@@ -206,9 +208,77 @@ $(document).ready(function () {
 			});
 
 			spangrandtotalprice.innerText = sum;
+
+
+			let trashicons = document.querySelectorAll(".ullist .trash");
+
+			trashicons.forEach(trashicon => {
+
+
+
+				trashicon.addEventListener("click", function () {
+
+
+
+					let products = JSON.parse(localStorage.getItem("basket"));
+
+
+
+					let filtredproduct = products.find(m => m.id == trashicon.getAttribute("data-id"));
+
+
+					let prod = products.indexOf(filtredproduct);
+
+					products.splice(prod, 1);
+
+					let num = document.querySelector(".num");
+
+					let itemcount = document.querySelector(".itemcount");
+
+					num.innerText = products.length;
+
+					itemcount.innerText = products.length;
+
+
+
+					localStorage.setItem("basket", JSON.stringify(products));
+
+
+					takeGrandTotalPrice();
+
+					this.parentNode.remove();
+
+					let res = localStorage.getItem("basket");
+
+					if (res.length == 0) {
+						localStorage.clear()
+						
+				    let subtotalprice = document.querySelector(".subtotalprice");
+
+				    subtotalprice.classList.add("d-none");
+
+					}
+
+				})
+
+
+
+			});
+
+
+
+
+
+
+		
 		}
 
 		takeGrandTotalPrice();
+	}
+	else{
+
+		$(".prag").classList.remove(".d-none");
+		$(".subtotal").classList.add(".d-none");
 	}
 
 
@@ -237,7 +307,7 @@ $(document).ready(function () {
 
 			let existProduct = products.find(m => m.id == productId);
 
-
+           
 
 			if (existProduct != undefined) {
 				existProduct.count += 1;
@@ -250,6 +320,65 @@ $(document).ready(function () {
 						tdproductcount.innerText = existProduct.count;
 					}
 				});
+
+				
+			let trashicons = document.querySelectorAll(".ullist .trash");
+
+			trashicons.forEach(trashicon => {
+
+
+
+				trashicon.addEventListener("click", function () {
+
+
+
+					let products = JSON.parse(localStorage.getItem("basket"));
+
+
+
+					let filtredproduct = products.find(m => m.id == trashicon.getAttribute("data-id"));
+
+
+					let prod = products.indexOf(filtredproduct);
+
+					products.splice(prod, 1);
+
+					let num = document.querySelector(".num");
+
+					let itemcount = document.querySelector(".itemcount");
+
+					num.innerText = products.length;
+
+					itemcount.innerText = products.length;
+
+
+
+					localStorage.setItem("basket", JSON.stringify(products));
+
+
+					takeGrandTotalPrice();
+
+					this.parentNode.remove();
+
+					let res = localStorage.getItem("basket");
+
+					if (res.length == 0) {
+						localStorage.clear();
+
+						subtotalprice.classList.add("d-none");
+						
+				    let subtotalprice = document.querySelector(".subtotalprice");
+
+				    // subtotalprice.classList.add("d-none");
+
+					}
+
+				})
+
+
+
+			});
+
 
 			} else {
 
