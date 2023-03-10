@@ -252,10 +252,10 @@ $(document).ready(function () {
 
 					if (res.length == 0) {
 						localStorage.clear()
-						
-				    let subtotalprice = document.querySelector(".subtotalprice");
 
-				    subtotalprice.classList.add("d-none");
+						let subtotalprice = document.querySelector(".subtotalprice");
+
+						subtotalprice.classList.add("d-none");
 
 					}
 
@@ -270,19 +270,11 @@ $(document).ready(function () {
 
 
 
-		
+
 		}
 
 		takeGrandTotalPrice();
 	}
-	else{
-
-		$(".prag").classList.remove(".d-none");
-		$(".subtotal").classList.add(".d-none");
-	}
-
-
-	
 
 
 	cardBtns.forEach(btn => {
@@ -307,7 +299,7 @@ $(document).ready(function () {
 
 			let existProduct = products.find(m => m.id == productId);
 
-           
+
 
 			if (existProduct != undefined) {
 				existProduct.count += 1;
@@ -321,63 +313,63 @@ $(document).ready(function () {
 					}
 				});
 
-				
-			let trashicons = document.querySelectorAll(".ullist .trash");
 
-			trashicons.forEach(trashicon => {
+				let trashicons = document.querySelectorAll(".ullist .trash");
 
-
-
-				trashicon.addEventListener("click", function () {
+				trashicons.forEach(trashicon => {
 
 
 
-					let products = JSON.parse(localStorage.getItem("basket"));
+					trashicon.addEventListener("click", function () {
 
 
 
-					let filtredproduct = products.find(m => m.id == trashicon.getAttribute("data-id"));
-
-
-					let prod = products.indexOf(filtredproduct);
-
-					products.splice(prod, 1);
-
-					let num = document.querySelector(".num");
-
-					let itemcount = document.querySelector(".itemcount");
-
-					num.innerText = products.length;
-
-					itemcount.innerText = products.length;
+						let products = JSON.parse(localStorage.getItem("basket"));
 
 
 
-					localStorage.setItem("basket", JSON.stringify(products));
+						let filtredproduct = products.find(m => m.id == trashicon.getAttribute("data-id"));
 
 
-					takeGrandTotalPrice();
+						let prod = products.indexOf(filtredproduct);
 
-					this.parentNode.remove();
+						products.splice(prod, 1);
 
-					let res = localStorage.getItem("basket");
+						let num = document.querySelector(".num");
 
-					if (res.length == 0) {
-						localStorage.clear();
+						let itemcount = document.querySelector(".itemcount");
 
-						subtotalprice.classList.add("d-none");
-						
-				    let subtotalprice = document.querySelector(".subtotalprice");
+						num.innerText = products.length;
 
-				    // subtotalprice.classList.add("d-none");
-
-					}
-
-				})
+						itemcount.innerText = products.length;
 
 
 
-			});
+						localStorage.setItem("basket", JSON.stringify(products));
+
+
+						takeGrandTotalPrice();
+
+						this.parentNode.remove();
+
+						let res = localStorage.getItem("basket");
+
+						if (res.length == 0) {
+							localStorage.clear();
+
+							subtotalprice.classList.add("d-none");
+
+							let subtotalprice = document.querySelector(".subtotalprice");
+
+							// subtotalprice.classList.add("d-none");
+
+						}
+
+					})
+
+
+
+				});
 
 
 			} else {
@@ -445,10 +437,10 @@ $(document).ready(function () {
 
 					if (res.length == 0) {
 						localStorage.clear()
-						
-				    let subtotalprice = document.querySelector(".subtotalprice");
 
-				    subtotalprice.classList.add("d-none");
+						let subtotalprice = document.querySelector(".subtotalprice");
+
+						subtotalprice.classList.add("d-none");
 
 					}
 
@@ -496,13 +488,6 @@ $(document).ready(function () {
 
 	})
 
-
-
-
-
-
-
-
 	//Basketcount assigned minicart sup
 	function getBasketCount(arr) {
 
@@ -522,15 +507,7 @@ $(document).ready(function () {
 
 		arr.forEach(item => {
 
-			// 	ul.innerHTML += `<tr data-id="${item.id}" >
-			// <td><span data-id="${item.id}" class="tdname">${item.name}</span><i data-id="${item.id}" class="fa-solid fa-trash trash"></i></td><br>
-			// <td><span data-id="${item.id}" class="tdcount">${item.count}</span></td> X <td><span data-id="${item.id}" class="tdprice">${item.price}</span></td>
-			// <hr>
-			// </tr>`
-
-			ul.innerHTML += `<li data-id="${item.id}"><span class="tdname">${item.name}</span><i data-id="${item.id}" class="fa-solid fa-trash trash"></i><br><span data-id="${item.id}" class="tdcount">${item.count}</span> X <span data-id="${item.id}" class="tdprice">${item.price}</span></li>`;
-
-
+		ul.innerHTML += `<li data-id="${item.id}"><span class="tdname">${item.name}</span><i data-id="${item.id}" class="fa-solid fa-trash trash"></i><br><span data-id="${item.id}" class="tdcount">${item.count}</span> X <span data-id="${item.id}" class="tdprice">${item.price}</span></li>`;
 
 
 
@@ -554,9 +531,6 @@ $(document).ready(function () {
 	}
 
 
-
-
-
 	// 	 //CHECK CARD
 
 	let cart = document.querySelector(".minicart");
@@ -571,6 +545,50 @@ $(document).ready(function () {
 
 
 
+  //WISHLIST//=====================================================================================
+
+
+
+  let likeProducts = [];
+
+
+
+  let hearts = document.querySelectorAll(".likeheart")
+
+  hearts.forEach(heart => {
+	
+	heart.addEventListener("click" , function(e){
+
+		e.preventDefault();
+
+
+	let namelike = this.parentNode.parentNode.children[5].children[0].children[2].innerText;
+
+	let pricelike = this.parentNode.parentNode.children[5].children[7].innerText;
+
+	let imglike =  this.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
+
+	let likeid = this.parentNode.parentNode.parentNode.getAttribute("data-id");
+
+	console.log(likeid);
+
+
+	likeProducts.push({
+		id: likeid,
+		img: imglike,
+		name: namelike,
+		price: pricelike,
+
+	})
+
+
+	localStorage.setItem("wishlist",JSON.stringify(likeProducts));
+
+
+
+	})
+
+  });
 
 
 
@@ -587,6 +605,56 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//MODAL 
+
+	let eyes = document.querySelectorAll(".eyess");
+
+	let modal = document.querySelector(".modal");
+
+	eyes.forEach(item => {
+
+		item.addEventListener("click", function (e) {
+
+			e.preventDefault();
+
+			modal.classList.remove("d-none");
+
+			modal.children[2].children[0].children[0].innerText = this.parentNode.nextElementSibling.nextElementSibling.children[0].children[2].innerText;
+
+			modal.children[2].children[0].children[1].children[0].children[1].innerText = this.parentNode.nextElementSibling.nextElementSibling.children[7].innerText*2;
+
+			modal.children[2].children[0].children[2].children[1].innerText = this.parentNode.nextElementSibling.nextElementSibling.children[7].innerText;
+
+			let img = this.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
+			
+			 modal.children[1].children[0].setAttribute('src',img); 
+
+		})
+	});
+
+
+	let close = document.querySelector(".close");
+
+	close.addEventListener("click",function(){
+
+		modal.classList.add("d-none");
+	})
+
+	
 
 
 
@@ -605,9 +673,4 @@ $(document).ready(function () {
 
 
 })
-
-
-
-
-
 

@@ -333,6 +333,8 @@
   border: 1px solid #e5e5e5;
   padding-left: 15px;
   outline: none;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
 }
 #blog .col-lg-4 .searchinput button {
   width: 64px;
@@ -353,51 +355,56 @@
   padding: 0px;
   height: 17px;
   margin-top: 23px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
-#blog .col-lg-4 .latesnews .underlines {
+#blog .col-lg-4 .underlines {
   width: 375px;
   display: flex;
 }
-#blog .col-lg-4 .latesnews .underlines .firstline {
+#blog .col-lg-4 .underlines .firstline {
   width: 60px;
   color: black;
   opacity: 1;
   border: 1px solid black;
   height: 1px;
 }
-#blog .col-lg-4 .latesnews .underlines .secondline {
+#blog .col-lg-4 .underlines .secondline {
   width: 345px;
   height: 4px;
   color: #555555;
   margin-top: 16px;
 }
-#blog .col-lg-4 .news {
+#blog .news {
   margin-top: 10px;
   display: flex;
   margin-bottom: 25px;
 }
-#blog .col-lg-4 .news .img {
+#blog .news .img {
   width: 113px;
   height: 64px;
 }
-#blog .col-lg-4 .news .img img {
+#blog .news .img img {
   width: 100%;
   height: 100%;
 }
-#blog .col-lg-4 .news .newsHeadlines {
+#blog .news .newsHeadlines {
   margin-left: 15px;
 }
-#blog .col-lg-4 .news .newsHeadlines h5 {
+#blog .news .newsHeadlines h5 {
   color: #333333;
   font-size: 16px;
   margin-bottom: 5px;
 }
-#blog .col-lg-4 .textWidget {
+#blog .textWidget {
   width: 375px;
   padding-left: 44px;
   margin-top: 15px;
 }
-#blog .col-lg-4 .textWidget h4 {
+#blog .textWidget h4 {
   padding: 0px;
   height: 17px;
   font-size: 17px;
@@ -406,36 +413,37 @@
   margin-top: 15px;
   margin-bottom: 5px;
 }
-#blog .col-lg-4 .textWidget .underlines {
+#blog .textWidget .underlines {
   width: 375px;
   display: flex;
   margin-bottom: 10px;
 }
-#blog .col-lg-4 .textWidget .underlines .firstline {
+#blog .textWidget .underlines .firstline {
   width: 60px;
   color: black;
   opacity: 1;
   border: 1px solid black;
   height: 1px;
 }
-#blog .col-lg-4 .textWidget .underlines .secondline {
+#blog .textWidget .underlines .secondline {
   width: 345px;
   height: 4px;
   color: #555555;
   margin-top: 16px;
 }
-#blog .col-lg-4 .textWidget p {
+#blog .textWidget p {
   width: 375px;
   font-size: 14.5px;
   line-height: 27px;
   margin-bottom: 10px;
 }
-#blog .col-lg-4 .tagswidget {
+#blog .tagswidget {
   width: 375px;
   padding-left: 44px;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 60px;
 }
-#blog .col-lg-4 .tagswidget h4 {
+#blog .tagswidget h4 {
   padding: 0px;
   height: 17px;
   font-size: 17px;
@@ -444,25 +452,31 @@
   margin-top: 15px;
   margin-bottom: 5px;
 }
-#blog .col-lg-4 .tagswidget .underlines {
+#blog .tagswidget .underlines {
   width: 375px;
   display: flex;
   margin-bottom: 10px;
 }
-#blog .col-lg-4 .tagswidget .underlines .firstline {
+#blog .tagswidget .underlines .firstline {
   width: 60px;
   color: black;
   opacity: 1;
   border: 1px solid black;
   height: 1px;
 }
-#blog .col-lg-4 .tagswidget .underlines .secondline {
+#blog .tagswidget .underlines .secondline {
   width: 345px;
   height: 4px;
   color: #555555;
   margin-top: 16px;
 }
-#blog .col-lg-4 .tagswidget a {
+#blog .tagswidget .widgetss {
+  margin-top: 20px;
+}
+#blog .tagswidget .widgetss .insuranc {
+  margin-bottom: 15px;
+}
+#blog .tagswidget .widgetss .insuranc a {
   display: inline-block;
   text-decoration: none;
   padding-top: 5px;
@@ -476,9 +490,75 @@
   text-transform: uppercase;
   color: #787878;
   font-weight: 600;
+  margin-right: 10px;
 }
-#blog .col-lg-4 .tagswidget a span {
-  font-size: 14px;
+#blog .tagswidget .widgetss .insuranc a span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #787878;
+}
+#blog .tagswidget .widgetss .insuranc :hover {
+  background-color: orange;
+}
+#blog .tagswidget .widgetss .insuranc :hover span {
+  color: white;
+}
+#blog .tagswidget .widgetss .taxplans {
+  margin-bottom: 15px;
+}
+#blog .tagswidget .widgetss .taxplans a {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  text-transform: uppercase;
+  color: #787878;
+  font-weight: 600;
+  margin-right: 10px;
+}
+#blog .tagswidget .widgetss .taxplans a span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #787878;
+}
+#blog .tagswidget .widgetss .taxplans :hover {
+  background-color: orange;
+}
+#blog .tagswidget .widgetss .taxplans :hover span {
+  color: white;
+}
+#blog .tagswidget .widgetss .retirementsplan a {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  text-transform: uppercase;
+  color: #787878;
+  font-weight: 600;
+  margin-right: 10px;
+}
+#blog .tagswidget .widgetss .retirementsplan a span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #787878;
+}
+#blog .tagswidget .widgetss .retirementsplan :hover {
+  background-color: orange;
+}
+#blog .tagswidget .widgetss .retirementsplan :hover span {
+  color: white;
 }
 
 #footer {

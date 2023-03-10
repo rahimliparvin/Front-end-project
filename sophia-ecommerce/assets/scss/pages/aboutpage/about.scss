@@ -409,6 +409,19 @@
 
         width: 650px;
 
+        .accordion-header {
+            border: 1px solid #777;
+            border-radius: 4px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+
+            button{
+
+                font-size: 17px;
+                font-weight: 600;
+            }
+        }
+
         h2 {
             font-size: 36px;
             font-weight: 700;

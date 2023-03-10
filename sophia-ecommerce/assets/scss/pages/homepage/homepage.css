@@ -308,6 +308,7 @@
 
 #servicesinfos {
   margin-top: 30px;
+  position: relative;
 }
 #servicesinfos .col-3 {
   padding: 0px;
@@ -384,6 +385,116 @@
 #servicesinfos .lastbonusplus {
   border: 1px solid #e3e3e3;
   border-left: none;
+}
+#servicesinfos .modal {
+  display: flex;
+  width: 840px;
+  height: 500px;
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  top: 150px;
+  left: 350px;
+  transition: all 0.02s;
+  opacity: 1;
+  border: 1px solid black;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+#servicesinfos .modal .close {
+  color: red;
+  font-size: 27px;
+  position: left;
+  position: absolute;
+  left: 790px;
+}
+#servicesinfos .modal .img {
+  margin-top: 10px;
+  width: 420px;
+  height: 460px;
+  background-color: white;
+}
+#servicesinfos .modal .img img {
+  width: 100%;
+  height: 100%;
+}
+#servicesinfos .modal .modalproductinfo {
+  width: 340px;
+  background-color: white;
+}
+#servicesinfos .modal .modalproductinfo h2 {
+  margin-top: 15px;
+  font-size: 36px;
+  color: #383838;
+  font-weight: 700;
+}
+#servicesinfos .modal .modalproductinfo .oldprice {
+  margin-bottom: 5px;
+}
+#servicesinfos .modal .modalproductinfo .oldprice del {
+  margin-right: 10px;
+}
+#servicesinfos .modal .modalproductinfo .oldprice del span {
+  font-size: 18px;
+  color: #777;
+  font-weight: 500;
+}
+#servicesinfos .modal .modalproductinfo .oldprice span {
+  color: #f33927;
+  font-size: 25px;
+  font-weight: 500;
+}
+#servicesinfos .modal .modalproductinfo .discountprice {
+  font-size: 26px;
+  color: #383838;
+  font-weight: 500;
+  border: 1px dashed #ddd;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 10px;
+}
+#servicesinfos .modal .modalproductinfo .productdetails {
+  border: 1px dashed #ddd;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility {
+  margin-top: 10px;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility .avalib {
+  color: #777777;
+  font-size: 14px;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility .instock {
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-weight: 500;
+  font-size: 14px;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility span {
+  color: #777777;
+  font-size: 14px;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility input {
+  margin-top: 10px;
+  width: 80px;
+  text-align: center;
+  background-color: #eee;
+  height: 35px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility .fa-minus {
+  margin-left: 10px;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility .cartmini {
+  margin-left: 135px;
+}
+#servicesinfos .modal .modalproductinfo .stockavalibility .eyesss {
+  margin-left: 20px;
 }
 
 #sliderswip body {
@@ -644,8 +755,8 @@
   display: none;
 }
 #carouselcards .swiper .swiper-wrapper .swiper-slide .carouselcard .eyes {
-  top: 56px;
-  left: 199px;
+  top: 56px !important;
+  left: 199px !important;
   display: none;
 }
 #carouselcards .swiper .swiper-wrapper .swiper-slide .carouselcard .refresh {

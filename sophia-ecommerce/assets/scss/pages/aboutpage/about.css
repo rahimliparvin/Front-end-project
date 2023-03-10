@@ -275,6 +275,16 @@
 #awesomequality .industry {
   width: 650px;
 }
+#awesomequality .industry .accordion-header {
+  border: 1px solid #777;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#awesomequality .industry .accordion-header button {
+  font-size: 17px;
+  font-weight: 600;
+}
 #awesomequality .industry h2 {
   font-size: 36px;
   font-weight: 700;
