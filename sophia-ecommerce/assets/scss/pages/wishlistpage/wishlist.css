@@ -1,0 +1,655 @@
+#navup {
+  background-color: #222222;
+}
+#navup .navbar-nav li .firsta {
+  padding: 0px 16px !important;
+  color: #c3c3c3;
+  font-size: 14px !important;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+#navup .navbar-nav li .firsta :hover {
+  color: gray;
+}
+#navup .navbarup {
+  background-color: #222222 !important;
+  height: 64px !important;
+}
+#navup .navbarup .dropdown-firstmenu li {
+  width: 221px;
+  height: 48px;
+  padding: 10px 16px;
+  border: 0.5px dashed rgb(245, 241, 241);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+#navup .navbarup .dropdown-firstmenu li span {
+  background-color: #ef6c00;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: 400;
+}
+#navup .navbarup .dropdown img {
+  width: 18px;
+  height: 14px;
+}
+#navup .navbarup .dropdown-secondmenu {
+  margin-left: 30px !important;
+}
+#navup .navbarup .dropdown-secondmenu li {
+  width: 221px;
+  height: 48px;
+  padding: 10px 16px;
+  border: 0.5px dashed rgb(245, 241, 241);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+}
+#navup .navbarup .dropdown-secondmenu li img {
+  width: 18px;
+  height: 14px;
+}
+#navup .navbarup .dropdown-secondmenu li span {
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+#navup .navbarup .likelogin {
+  margin-left: 700px;
+  cursor: pointer;
+}
+#navup .navbarup .likelogin a {
+  text-decoration: none;
+  width: 100px;
+  height: 50px;
+}
+#navup .navbarup .likelogin a :hover {
+  color: gray;
+}
+#navup .navbarup .likelogin a i {
+  color: #c3c3c3;
+  font-size: 20px;
+  margin-top: 1px;
+  margin-left: 15px;
+}
+#navup .navbarup .likelogin a span {
+  font-size: 13px;
+  color: #c3c3c3;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+#navdown {
+  background-color: #ef6c00;
+  height: 90px;
+  padding-top: 5px;
+}
+#navdown .navdowninfo {
+  display: flex;
+}
+#navdown .navdowninfo img {
+  margin-top: 20px;
+  margin-left: 16px;
+  width: 140px;
+  height: 40px;
+}
+#navdown .navdowninfo .searching {
+  margin-top: 20px;
+  position: relative;
+  margin-left: 100px;
+}
+#navdown .navdowninfo .searching input {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 1px #fff;
+  transition: box-shadow 0.3s ease-out;
+  height: 40px;
+  width: 510px;
+  padding: 0 0 0 12px;
+  outline: none;
+  box-shadow: none;
+}
+#navdown .navdowninfo .searching button {
+  position: absolute;
+  overflow: visible;
+  cursor: pointer;
+  height: 40px;
+  padding: 0 35px;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
+  text-transform: uppercase;
+  background-color: #333;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  border: none;
+}
+#navdown .telcart {
+  display: flex;
+}
+#navdown .telcart .tel {
+  margin-top: 20px;
+}
+#navdown .telcart .tel i {
+  font-size: 30px;
+  color: white;
+}
+#navdown .telcart .telnumber {
+  margin-top: 9px;
+  margin-left: 10px;
+}
+#navdown .telcart .telnumber span {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+#navdown .telcart .telnumber p {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+#navdown .telcart .minicart {
+  margin-top: 25px;
+  margin-left: 25px;
+  position: relative;
+}
+#navdown .telcart .minicart i {
+  color: white;
+  font-size: 20px;
+}
+#navdown .telcart .minicart .num {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+#navdown .telcart .minicart span {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+#navdown .telcart .minicart .minicartcount {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+}
+#navdown .telcart .minicart .minicartcount span {
+  background-color: #222222;
+  color: white;
+  padding: 0px;
+  border-radius: 15px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 1px;
+}
+
+#navexp {
+  height: 68px;
+  background-color: #F5F5F5;
+}
+#navexp .nav-expend {
+  height: 64px;
+  background-color: #F5F5F5;
+}
+#navexp .nav-expend .navbar-light {
+  background-color: #F5F5F5 !important;
+}
+#navexp .nav-expend .navbar-light .navbar-collapse {
+  height: 50px;
+}
+#navexp .nav-expend .navbar-light .nav-item {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #383838;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0 25px;
+  line-height: 63px;
+}
+#navexp .nav-expend .navbar-light .dropdown-menu a {
+  font-size: 14px;
+}
+#navexp .nav-expend .navbar-light .dropdown-menu .dropdown-item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: 48px;
+  height: 48px;
+  padding: 0 16px;
+  text-align: left;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
+}
+
+#servicesinfos {
+  margin-top: 30px;
+}
+#servicesinfos .col-3 {
+  padding: 0px;
+}
+#servicesinfos .bonusplus {
+  display: flex;
+  height: 133px;
+  background-color: #FFF;
+  justify-content: center;
+  border: 1px solid #e3e3e3;
+  border-left: none;
+  border-right: none;
+  cursor: text;
+}
+#servicesinfos .bonusplus .prise {
+  margin-top: 37px;
+  width: 14.4%;
+  height: 94px;
+  background-color: white;
+}
+#servicesinfos .bonusplus .prise i {
+  color: #ef6c00 !important;
+  font-size: 38px;
+  margin-right: 10px;
+  line-height: 65px;
+  clear: both;
+  width: auto;
+  height: 100%;
+  padding: 0 6px;
+  cursor: text;
+}
+#servicesinfos .bonusplus .prise .truck {
+  font-size: 36px;
+  padding: 0px;
+}
+#servicesinfos .bonusplus .prise p {
+  display: inline-block;
+}
+#servicesinfos .bonusplus .priseinfo {
+  width: 77.8%;
+  height: 100px;
+  background-color: white;
+  margin-top: 30px;
+  line-height: 1.5;
+  position: relative;
+}
+#servicesinfos .bonusplus .priseinfo p {
+  font-weight: 700;
+  font-size: 14.5px;
+  position: absolute;
+  top: 8%;
+}
+#servicesinfos .bonusplus .priseinfo span {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: #777;
+  position: absolute;
+  top: 29%;
+}
+#servicesinfos .bonusplus .borderline {
+  width: 1px;
+  border: 0.5px solid #e3e3e3;
+  height: 105px;
+  margin-top: 17px;
+  margin-left: 15px;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+}
+#servicesinfos .firstbonusplus {
+  border: 1px solid #e3e3e3;
+  border-right: none;
+}
+#servicesinfos .lastbonusplus {
+  border: 1px solid #e3e3e3;
+  border-left: none;
+}
+
+#wishlistpagebegin .wishlistpageleavehomepage {
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  width: 100%;
+}
+#wishlistpagebegin .wishlistpageleavehomepage .wishlist {
+  margin-top: 26px;
+  margin-left: 10px;
+}
+#wishlistpagebegin .wishlistpageleavehomepage .wishlist h4 {
+  font-size: 14px;
+  color: #333333;
+}
+#wishlistpagebegin .wishlistpageleavehomepage .homewishlist {
+  margin-top: 21px;
+  margin-right: 10px;
+}
+#wishlistpagebegin .wishlistpageleavehomepage .homewishlist a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+#wishlist .tablewishlist {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#wishlist .tablewishlist thead {
+  border: 2px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+#wishlist .tablewishlist .infowishlist {
+  margin-left: 500px;
+  width: 336px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #f33927;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 3px;
+}
+#wishlist .tablewishlist .infowishlist span {
+  font-weight: 500;
+}
+#wishlist .tablewishlist .getShopping {
+  margin-left: 580px;
+  margin-bottom: 200px;
+  width: 182px;
+  height: 46px;
+  background-color: #ef6c00;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#wishlist .tablewishlist .getShopping span {
+  font-size: 14px;
+  font-weight: 500;
+}
+#wishlist .tablewishlist .continueShopping {
+  margin-left: 50px;
+  margin-bottom: 200px;
+  width: 182px;
+  height: 46px;
+  background-color: #ef6c00;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#wishlist .tablewishlist .continueShopping span {
+  font-size: 14px;
+  font-weight: 500;
+}
+#wishlist .tablewishlist .grand {
+  margin-left: 665px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-weight: 500;
+}
+#wishlist .tablewishlist .granddollar {
+  font-weight: 500;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.8705882353);
+}
+#wishlist .tablewishlist .grandtotalprice {
+  font-weight: 500;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.8705882353);
+}
+#wishlist .tablewishlist .procedCheckout {
+  margin-left: 75px;
+  margin-bottom: 200px;
+  width: 182px;
+  height: 46px;
+  background-color: #ef6c00;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+#wishlist .tablewishlist .procedCheckout span {
+  font-size: 14px;
+  font-weight: 500;
+}
+#wishlist .tablewishlist img {
+  width: 100px;
+  height: 100px;
+  margin-left: 58px;
+}
+#wishlist .tablewishlist td span {
+  margin-left: 50px;
+}
+#wishlist .tablewishlist td input {
+  width: 80px;
+  text-align: center;
+  background-color: #eee;
+  height: 35px;
+  border: 1px solid #e5e5e5;
+}
+#wishlist .tablewishlist tr {
+  padding-left: 20px;
+}
+#wishlist .tablewishlist th {
+  padding-left: 70px;
+  width: 203px;
+  padding-left: 88px;
+  flex: 1;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5411764706);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+#wishlist .tablewishlist .hr {
+  color: black;
+  width: 90%;
+  height: 1px;
+}
+#wishlist .tablewishlist .price {
+  font-size: 21px;
+  font-weight: 500;
+  margin-left: 78px;
+  margin-top: 40px !important;
+}
+#wishlist .tablewishlist .zeros {
+  font-size: 21px;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+}
+#wishlist .tablewishlist .tdname {
+  padding-top: 39px;
+  color: rgba(0, 0, 0, 0.8705882353);
+  padding-left: 21px;
+}
+#wishlist .tablewishlist .tdname span {
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-size: 14px;
+  font-weight: 500;
+}
+#wishlist .tablewishlist .tdprice {
+  padding-top: 35px;
+}
+#wishlist .tablewishlist .clrth {
+  padding-left: 65px;
+}
+#wishlist .tablewishlist .clrth .clearAll {
+  margin-left: 1px;
+  width: 85px;
+  height: 36px;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+}
+#wishlist .tablewishlist .clrth .clearAll span {
+  color: white;
+  font-weight: 500;
+}
+#wishlist .tdaction {
+  padding-top: 40px;
+}
+#wishlist .tdaction i {
+  margin-left: 92px;
+  font-size: 18px;
+}
+
+#footer {
+  background-color: #F5F5F5;
+  height: 350px;
+}
+#footer .logo-service {
+  width: 689px;
+  background-color: #F5F5F5;
+  display: flex;
+}
+#footer .logo-service .logo-about {
+  width: 388px;
+  height: 225px;
+  padding-left: 15px;
+}
+#footer .logo-service .logo-about a {
+  text-decoration: none;
+  color: #383838;
+}
+#footer .logo-service .logo-about p {
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .logo-service .services {
+  width: 299px;
+  margin-left: 25px;
+}
+#footer .logo-service .services h5 {
+  color: #383838;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#footer .logo-service .services ul {
+  padding: 0px;
+}
+#footer .logo-service .services ul li {
+  list-style: none;
+}
+#footer .logo-service .services ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 32px;
+  color: #333;
+}
+#footer .subscribe-address {
+  width: 636px;
+  display: flex;
+  background-color: #F5F5F5;
+}
+#footer .subscribe-address .subscribe {
+  width: 315px;
+  padding-right: 15px;
+}
+#footer .subscribe-address .subscribe h5 {
+  color: #383838;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#footer .subscribe-address .subscribe p {
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .subscribe input {
+  height: 45px;
+  width: 280px;
+  background: #fff;
+  font-size: 15px;
+  line-height: 45px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 0 65px 0 20px;
+  color: #777;
+}
+#footer .subscribe-address .subscribe button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+  z-index: 222;
+  background-color: #ef6c00;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 45px;
+  width: 280px;
+}
+#footer .subscribe-address .addresscommunications {
+  width: 315px;
+}
+#footer .subscribe-address .addresscommunications h5 {
+  color: #383838;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#footer .subscribe-address .addresscommunications .address p {
+  display: inline-block;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .addresscommunications .telnumber p {
+  display: inline-block;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .addresscommunications .message p {
+  display: inline-block;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+#footer .subscribe-address .addresscommunications .socials ul {
+  display: flex;
+  padding: 0px;
+}
+#footer .subscribe-address .addresscommunications .socials ul li {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 5px;
+  list-style: none;
+}
+#footer .subscribe-address .addresscommunications .socials ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 32px;
+  color: #333;
+}/*# sourceMappingURL=wishlist.css.map */

@@ -2,6 +2,7 @@ $(document).ready(function () {
 
 
     let tableBody = document.querySelector("tbody");
+
     let products = JSON.parse(localStorage.getItem("basket"));
 
 
@@ -10,7 +11,9 @@ $(document).ready(function () {
 
         let table = document.querySelector("table")
 
-        table.classList.add("d-none");
+       // table.classList.add("d-none");
+
+       table.classList.add("d-none");
 
 
         let infobasket = document.querySelector(".infoBasket")
@@ -229,6 +232,7 @@ $(document).ready(function () {
             let products = JSON.parse(localStorage.getItem("basket"));
 
             for (const product of products) {
+                
                 if (product.id == this.getAttribute("data-id")) {
 
                     let prod = products.indexOf(product);

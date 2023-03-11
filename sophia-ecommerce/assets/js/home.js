@@ -615,7 +615,7 @@ $(document).ready(function () {
 
 
 
-
+  
 
 
 
@@ -630,6 +630,18 @@ $(document).ready(function () {
 		item.addEventListener("click", function (e) {
 
 			e.preventDefault();
+
+			
+			//  let body = document.querySelector("body");
+
+			//  body.style.opacity = 0.8;
+
+			//  body.style.backgroundColor = "gray";
+
+			//  modal.style.opacity =1;
+
+			//  modal.style.backgroundColor = "white"
+
 
 			modal.classList.remove("d-none");
 

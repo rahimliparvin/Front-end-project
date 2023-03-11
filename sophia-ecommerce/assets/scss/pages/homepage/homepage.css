@@ -391,7 +391,7 @@
   width: 840px;
   height: 500px;
   background-color: white;
-  z-index: 2;
+  z-index: 5;
   position: absolute;
   top: 150px;
   left: 350px;
