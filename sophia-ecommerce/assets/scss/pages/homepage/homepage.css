@@ -39,7 +39,8 @@
 }
 #navup .navbarup .dropdown img {
   width: 18px;
-  height: 14px;
+  height: 15px;
+  margin-right: 5px;
 }
 #navup .navbarup .dropdown-secondmenu {
   margin-left: 30px !important;
@@ -65,7 +66,7 @@
   font-family: "Poppins", sans-serif;
 }
 #navup .navbarup .likelogin {
-  margin-left: 700px;
+  margin-left: 650px;
   cursor: pointer;
 }
 #navup .navbarup .likelogin a {
@@ -306,6 +307,28 @@
   position: relative;
 }
 
+#overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(94, 92, 92);
+  opacity: 0.5;
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
 #servicesinfos {
   margin-top: 30px;
   position: relative;
@@ -392,7 +415,7 @@
   height: 500px;
   background-color: white;
   z-index: 5;
-  position: absolute;
+  position: fixed;
   top: 150px;
   left: 350px;
   transition: all 0.02s;
@@ -683,7 +706,7 @@
   transition-duration: 150ms !important;
 }
 #carouselcards .swipers {
-  margin-left: -460px !important;
+  margin-left: -500px !important;
 }
 #carouselcards .swiper-button-prev {
   background-color: #EF6C00;
@@ -720,7 +743,7 @@
 #carouselcards .swiper .swiper-wrapper .swiper-slide {
   width: 245px !important;
   height: 383px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
 }
 #carouselcards .swiper .swiper-wrapper .swiper-slide .carouselcard {
   position: relative;
@@ -1048,6 +1071,7 @@
   width: 280px;
   background: #fff;
   font-size: 15px;
+  outline: none;
   line-height: 45px;
   border: 1px solid #e2e2e2;
   border-radius: 4px;

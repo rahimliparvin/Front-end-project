@@ -6,18 +6,49 @@ $(document).ready(function () {
 	let europrice = document.querySelector("#navup .europrice");
 
 	europrice.addEventListener("click", function () {
-		let euroPriceText = this.firstElementChild.innerText
 
-		this.parentNode.previousElementSibling.innerText = euroPriceText
+		let euroPriceText = this.firstElementChild.innerText;
+
+		this.parentNode.previousElementSibling.innerText = euroPriceText;
 	})
 
 	let usdprice = document.querySelector("#navup .usdprice");
 
 	usdprice.addEventListener("click", function () {
-		let usdPriceText = this.firstElementChild.innerText
+		let usdPriceText = this.firstElementChild.innerText;
 
-		this.parentNode.previousElementSibling.innerText = usdPriceText
+		this.parentNode.previousElementSibling.innerText = usdPriceText;
 	})
+
+
+
+
+	//flag====================================================
+
+
+
+
+	let liflags = document.querySelectorAll(".dropdown-secondmenu li");
+
+
+	liflags.forEach(liflag => {
+
+		liflag.addEventListener("click", function () {
+
+			this.parentNode.previousElementSibling.children[0].setAttribute('src', this.children[0].getAttribute("src"));
+			this.parentNode.previousElementSibling.children[1].innerText = this.children[1].innerText;
+		})
+	});
+
+
+
+
+
+
+
+
+
+
 
 
 	//SLIDER
@@ -141,7 +172,7 @@ $(document).ready(function () {
 
 	//carousel
 	var swiper = new Swiper(".carousel", {
-		slidesPerView: 4,
+		slidesPerView: 8,
 		spaceBetween: 30,
 		centeredSlides: true,
 		pagination: {
@@ -507,7 +538,7 @@ $(document).ready(function () {
 
 		arr.forEach(item => {
 
-		ul.innerHTML += `<li data-id="${item.id}"><span class="tdname">${item.name}</span><i data-id="${item.id}" class="fa-solid fa-trash trash"></i><br><span data-id="${item.id}" class="tdcount">${item.count}</span> X <span data-id="${item.id}" class="tdprice">${item.price}</span></li>`;
+			ul.innerHTML += `<li data-id="${item.id}"><span class="tdname">${item.name}</span><i data-id="${item.id}" class="fa-solid fa-trash trash"></i><br><span data-id="${item.id}" class="tdcount">${item.count}</span> X <span data-id="${item.id}" class="tdprice">${item.price}</span></li>`;
 
 
 
@@ -545,80 +576,63 @@ $(document).ready(function () {
 
 
 
-  //WISHLIST//=====================================================================================
+	//WISHLIST//=====================================================================================
 
 
 
-  let likeProducts = [];
+
+	let wishlistproducts = JSON.parse(localStorage.getItem("wishlist"));
+
+	let likeProducts = [];
+
+
+	if (wishlistproducts != null) {
+
+		likeProducts = JSON.parse(localStorage.getItem("wishlist"));
+	}
 
 
 
-  let hearts = document.querySelectorAll(".likeheart")
+	let hearts = document.querySelectorAll(".likeheart")
 
-  hearts.forEach(heart => {
+	hearts.forEach(heart => {
+
+		heart.addEventListener("click", function (e) {
+
+			e.preventDefault();
+
+
+			let namelike = this.parentNode.parentNode.children[5].children[0].children[2].innerText;
+
+			let pricelike = this.parentNode.parentNode.children[5].children[7].innerText;
+
+			let imglike = this.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
+
+			let likeid = this.parentNode.parentNode.parentNode.getAttribute("data-id");
+
+			//	console.log(likeid);
+
+
+			likeProducts.push({
+				id: likeid,
+				img: imglike,
+				name: namelike,
+				price: pricelike,
+
+			})
+
+
+			localStorage.setItem("wishlist", JSON.stringify(likeProducts));
+
+
+
+		})
+
+	});
+
+
+
 	
-	heart.addEventListener("click" , function(e){
-
-		e.preventDefault();
-
-
-	let namelike = this.parentNode.parentNode.children[5].children[0].children[2].innerText;
-
-	let pricelike = this.parentNode.parentNode.children[5].children[7].innerText;
-
-	let imglike =  this.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
-
-	let likeid = this.parentNode.parentNode.parentNode.getAttribute("data-id");
-
-	console.log(likeid);
-
-
-	likeProducts.push({
-		id: likeid,
-		img: imglike,
-		name: namelike,
-		price: pricelike,
-
-	})
-
-
-	localStorage.setItem("wishlist",JSON.stringify(likeProducts));
-
-
-
-	})
-
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
 	//MODAL 
 
 	let eyes = document.querySelectorAll(".eyess");
@@ -631,42 +645,85 @@ $(document).ready(function () {
 
 			e.preventDefault();
 
-			
-			//  let body = document.querySelector("body");
-
-			//  body.style.opacity = 0.8;
-
-			//  body.style.backgroundColor = "gray";
-
-			//  modal.style.opacity =1;
-
-			//  modal.style.backgroundColor = "white"
-
+			document.getElementById("overlay").style.display = "block";
 
 			modal.classList.remove("d-none");
 
 			modal.children[2].children[0].children[0].innerText = this.parentNode.nextElementSibling.nextElementSibling.children[0].children[2].innerText;
 
-			modal.children[2].children[0].children[1].children[0].children[1].innerText = this.parentNode.nextElementSibling.nextElementSibling.children[7].innerText*2;
+			modal.children[2].children[0].children[1].children[0].children[1].innerText = this.parentNode.nextElementSibling.nextElementSibling.children[7].innerText * 2;
 
 			modal.children[2].children[0].children[2].children[1].innerText = this.parentNode.nextElementSibling.nextElementSibling.children[7].innerText;
 
 			let img = this.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
-			
-			 modal.children[1].children[0].setAttribute('src',img); 
+
+			modal.children[1].children[0].setAttribute('src', img)
+
+
+
+
+
 
 		})
 	});
 
 
-	let close = document.querySelector(".close");
+	let overlay = document.getElementById("overlay")
 
-	close.addEventListener("click",function(){
+
+	overlay.addEventListener("click", function () {
+
 
 		modal.classList.add("d-none");
+
+		overlay.style.display = "none"
+
+
 	})
 
-	
+
+
+	let close = document.querySelector(".close");
+
+	close.addEventListener("click", function () {
+
+		modal.classList.add("d-none");
+
+		document.getElementById("overlay").style.display = "none";
+
+		document.body.style.overflow = "block";
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

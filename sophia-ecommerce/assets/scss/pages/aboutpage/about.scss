@@ -870,3 +870,32 @@
 
 
 }
+
+
+
+
+.flag {
+
+    .divider {
+        margin: 1px !important;
+    }
+
+    .ui {
+        background-color: #222222 !important;
+        color: white;
+
+
+        .search {
+            background-color: #222222 !important;
+
+            .selection {
+
+                // background-color: #222222 !important;
+                .dropdown {
+                    background-color: #222222 !important;
+                }
+
+            }
+        }
+    }
+}

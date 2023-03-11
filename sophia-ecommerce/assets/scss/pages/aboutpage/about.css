@@ -583,4 +583,18 @@
   font-size: 15px;
   line-height: 32px;
   color: #333;
+}
+
+.flag .divider {
+  margin: 1px !important;
+}
+.flag .ui {
+  background-color: #222222 !important;
+  color: white;
+}
+.flag .ui .search {
+  background-color: #222222 !important;
+}
+.flag .ui .search .selection .dropdown {
+  background-color: #222222 !important;
 }/*# sourceMappingURL=about.css.map */
