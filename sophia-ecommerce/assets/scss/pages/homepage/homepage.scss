@@ -751,12 +751,6 @@
 }
 
 
-
-
-//Modal product
-
-
-
 // FirstSlider(homepage)
 #sliderswip {
 
@@ -1502,6 +1496,106 @@
 
 
 }
+
+#prodact-star {
+
+
+    margin-top: 45px;
+
+    .info-prodacts-star {
+
+
+
+
+        ._line {
+            margin-top: 5px;
+            display: flex;
+            margin-bottom: 18px;
+
+            ._line-black {
+                height: 2px;
+                width: 38px;
+                background-color: black;
+            }
+
+            ._line-gray {
+                height: 2px;
+                width: 287px;
+                background-color: rgba(160, 157, 157, 0.562);
+            }
+
+        }
+
+
+        .info-prodacts-button {
+
+            display: flex;
+
+            gap: 20px;
+            margin-top: 20px;
+
+            .featured-products-img {
+                a {
+                    text-decoration: none;
+
+                    img {
+                        width: 86px;
+                        height: 86px;
+                        background-color: #F5F5F5
+                    }
+
+                }
+
+
+            }
+
+            .star-icon {
+                padding-top: 10px;
+
+
+                .info-prodact-text {
+
+                    a {
+                        text-decoration: none;
+
+                        span {
+                            font-size: 15px;
+                            color: black;
+                            font-weight: bold;
+                            font-family: 'Lucida Sans', 'Lucida SansRegular', ' Lucida Grande', ' Lucida Sans Unicode', Geneva, Verdana,sans-serif;
+                        }
+
+                    }
+
+                }
+
+
+
+
+                i {
+                    color: goldenrod;
+                }
+
+                h6 {
+                    padding-top: 5px;
+                    font-size: 15px;
+
+                }
+
+
+            }
+
+
+
+        }
+
+    }
+
+
+
+}
+
+
 
 #footer {
 
