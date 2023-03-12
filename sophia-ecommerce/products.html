@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/scss/pages/productspage/products.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <section id="navup">
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary navbarup">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle firsta" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            USD
+                                        </a>
+                                        <ul class="dropdown-menu  dropdown-firstmenu">
+                                            <li class="usdprice"><span>USD</span></li>
+                                            <li class="europrice"><span>EUR</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle firsta" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                                            <img src="./assets/img/gbflag.svg" alt=""><span>English</span>
+
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-secondmenu">
+                                            <li><img src="./assets/img/gbflag.svg" alt=""><span>English</span>
+                                            </li>
+                                            <li><img src="./assets/img/germanyflag.svg" alt=""><span>German</span></li>
+                                            <li><img src="./assets/img/franceflag.svg" alt=""><span>French</span></li>
+                                            <li><img src="./assets/img/russianflag.svg" alt=""><span>Russian</span>
+                                            </li>
+                                            <li><img src="./assets/img/turkeyflag.svg" alt=""><span>Turkish</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <div class="likelogin">
+                                    <a href="wishlist.html"><i class="fa-regular fa-heart"></i><span>WISHLIST</span></a>
+                                    <a href=""><i class="fa-solid fa-arrows-rotate"></i><span>COMPARE</span></a><a
+                                        href="myaccount.html"><i class="fa-solid fa-user"></i><span>My
+                                            Account</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section id="navdown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="navdowninfo">
+                            <a href="homepage.html"> <img src="./assets/img/sofia-logo.png" alt=""></a>
+                            <div class="searching"><input placeholder="Type to search..." type="search"><button
+                                    type="submit">Search</button></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="telcart">
+                            <div class="tel">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="telnumber">
+                                <span>Helpline:</span><br>
+                                <p>02(981)336 111</p>
+                            </div>
+                            <div class="minicart">
+                                <i class="fa-solid fa-cart-shopping"></i> <span>$</span><span
+                                    class="spangrandtotalprice">0</span><span>.00</span>
+                                <div class="minicartcount"><span class="num">0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="getBasketProductList" style="display: none">
+            <div class="border"></div>
+            <div class="checkcard"> <span>CHECK CARD</span><span class="itemcount">0</span><span>ITEM</span></div>
+            <hr>
+
+            <ul class="ullist">
+                <p>Please add product</p>
+            </ul>
+            <div class="subtotal d-none"><span class="stotal">Subtotal:</span> <span>$</span><span
+                    class="subtotalprice">0</span>.00</div>
+
+        </div>
+        <section id="navexp">
+            <div class="container">
+                <div class="nav-expend">
+
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="homepage.html">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">ABOUT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">CONTACT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html">BLOG</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        PAGES
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="about.html">About Us</a>
+                                        <a class="dropdown-item" href="#">FAQ</a>
+                                        <a class="dropdown-item" href="contact.html">Contact</a>
+                                        <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                                        <a class="dropdown-item" href="#">Testimonials<span>NEW</span> </a>
+                                        <a class="dropdown-item" href="#">Compare</a>
+                                        <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                        <a class="dropdown-item" href="cart.html">Cart</a>
+                                        <a class="dropdown-item" href="myaccount.html">My Account</a>
+                                        <a class="dropdown-item" href="#">404</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="productspagebegin">
+            <div class="container">
+                <div class="productspageleavehomepage">
+                    <div class="productdetail">
+                        <h4>PRODUCTSDETAIL</h4>
+                    </div>
+                    <div class="homeproducts"><a href="homepage.html">HOME</a> / <a
+                            href="products.html">PRODUCTSDETAIL</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <section id="page-title">
+
+            <div class="container ">
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+
+                        <div class="contact">
+                            <h4>Product</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="content">
+
+                            <li class="title">
+                                <a href="home.html">HOME</a>
+                            </li>
+                            <li>/</li>
+                            <li>Product</li>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <section id="products">
+
+
+            <div class="container">
+
+
+                <div class="row">
+
+
+                    <div class="col-5">
+
+
+                        <div class="modal-prodact">
+
+                            <div class="main-img">
+
+                                <img src="./assets/img/caruselfoto1.png" alt="">
+
+                            </div>
+
+
+
+                            <div class="_slider">
+                                <div class="slide">
+                                    <img src="./assets/img/carouselfoto2.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/img/carouselfoto3.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/img/carouselfoto4.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/img/carouselfoto5.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/img/carouselfoto6.png" alt="">
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="col-4">
+
+                        <div class="product-info">
+
+
+                            <h1>ONTEC E Headset</h1>
+
+                            <div class="sale-text">
+                                <div class="sale"><span>$160.00</span> </div>
+
+                                <div class="sale-info"><span>50%
+                                        Off</span></div>
+
+                            </div>
+
+
+
+                            <h3>$175.00</h3>
+                            <div class="line-text">
+
+                                <span>Lorem Ipsum is simply dummy text
+                                    of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industrys standard
+                                    dummy text ever since the 1500s, when an unknown
+                                    printer
+                                    took a galley of type and
+                                    scrambled it to make a type specimen book.</span>
+
+                            </div>
+
+
+
+                            <div class="stock">
+
+                                <h6>Avalibility: In Stock</h6>
+                                <h6>Quantity</h6>
+                            </div>
+
+
+                            <div class="number">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" />
+                                <span class="plus">+</span>
+                            </div>
+
+
+                            <div class="button-buy">
+
+                                <button type="button" class="btn
+btn-warning">ADD TO CARD</button>
+
+                                <button type="button" class="btn
+btn-warning buy-now">BUY NOW</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-3">
+
+
+                        <div class="product-contact">
+
+
+
+
+                            <div class="info-bar-free">
+
+                                <div class="info-bar-menu">
+
+                                    <div>
+                                        <i class="fa-solid fa-gift"></i>
+                                    </div>
+
+
+
+                                    <div>
+
+
+                                        <h6>BONUS PLUS</h6>
+
+
+
+
+                                        <span>Get a bonus plus for
+                                            buying more that three products</span>
+
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                                <div class="border-buttom-solid">
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+
+                            <div class="info-bar-free">
+
+                                <div class="info-bar-menu free-shoping">
+
+                                    <div>
+                                        <i class="fa-solid fa-truck"></i>
+                                    </div>
+
+
+
+                                    <div>
+
+
+                                        <h6>FREE SHIPPING</h6>
+
+
+
+
+                                        <span>Free shipping on all
+                                            orders over $99</span>
+
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                                <div class="border-buttom-solid">
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+                            <div class="info-bar-free">
+
+                                <div class="info-bar-menu money-card">
+
+                                    <div class="icon-usd">
+                                        <i class="fa-solid fa-dollar-sign"></i>
+                                    </div>
+
+
+
+                                    <div>
+
+
+                                        <h6>MONEY BACK GUARANTEE</h6>
+
+
+
+
+                                        <span>100% money back guarantee</span>
+
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                                <div class="border-buttom-solid">
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="info-bar-free">
+
+                                <div class="info-bar-menu">
+
+                                    <div>
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+
+
+
+                                    <div>
+
+
+                                        <h6>ONLINE SUPPORT 24/7</h6>
+
+
+
+
+                                        <span>Call us: 02 3555 65454 55</span>
+
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+                        <div class="big-sale">
+
+                            <h1>BIG SALLE</h1>
+                            <h5>DO NOT MISS IT!</h5>
+
+                            <div class="sale">
+                                <div class="number">
+                                    <span>60</span>
+                                </div>
+
+
+                                <div class="text">
+                                    <h1>%</h1>
+                                    <span>off</span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="text-lorem">
+                                <span>Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Curabitur nects.</span>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+        </section>
+
+
+        <div class="container">
+
+            <div class="col-9">
+
+                <section id="tab-menu">
+
+
+
+
+                    <main class="main">
+                        <div class="container">
+                            <div class="tab">
+                                <div class="tab-menu">
+                                    <button class="tab-menu-link" data-content="item-1">
+                                        <span data-title="item-1">Description</span>
+                                    </button>
+                                    <button class="tab-menu-link
+is-active" data-content="item-2">
+                                        <span data-title="item-2">Details</span>
+                                    </button>
+                                    <button class="tab-menu-link" data-content="item-3">
+                                        <span data-title="item-3">Reviews</span>
+                                    </button>
+
+                                </div>
+                                <div class="tab-bar">
+                                    <div class="tab-bar-content" id="item-1">
+                                        <div class="texts">
+
+                                            <p class="paragraph">
+                                                Lorem Ipsum is simply
+                                                dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum
+                                                has been the industrys standard dummy text ever
+                                                since the 1500s, when
+                                                an unknown printer took a galley of type and
+                                                scrambled it to make a
+                                                type specimen book. It has survived not only five
+                                                centuries, but also
+                                                the leap into electronic typesetting, remaining
+                                                essentially unchanged.
+                                                It was popularised in the 1960s with the release
+                                                of Letraset sheets
+                                                containing Lorem Ipsum passages, and more recently
+                                                with desktop
+                                                publishing software like Aldus PageMaker including versions
+                                                of Lorem Ipsum. Lorem
+                                                Ipsum is simply dummy text of the printing and
+                                                typesetting industry.
+                                                Lorem Ipsum has been the industrys standard dummy
+                                                text ever since the
+                                                1500s, when an unknown printer took a galley of type
+                                                and scrambled it to
+                                                make a type specimen book. It has survived not only
+                                                five centuries, but
+                                                also the leap into electronic typesetting, remaining
+                                                essentially unchanged.
+                                                It was popularised in the 1960s with the release
+                                                of Letraset sheets
+                                                containing Lorem Ipsum passages, and more recently
+                                                with desktop
+                                                publishing software like Aldus PageMaker including versions
+                                                of Lorem Ipsum.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-bar-content
+is-active" id="item-2">
+                                        <div class="texts">
+
+                                            <p class="paragraph">
+                                                Duis aute irure dolor
+                                                in reprehenderit in voluptate velit esse cillum
+                                                dolore eu fugiat nulla
+                                                pariatur. Excepteur sint occaecat cupidatat non
+                                                proident, sunt in
+                                                culpa qui officia deserunt mollit anim id est laborum.
+
+                                                Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit.
+                                                Aenean vehicula,
+                                                tortor gravida elementum tincidunt, justo lorem
+                                                vestibulum ex, eget
+                                                egestas arcu tellus in magna. Vivamus gravida, ipsum
+                                                vel luctus luctus,
+                                                nisi felis vestibulum est, nec interdum tellus leo
+                                                quis tellus. Sed sit
+                                                amet convallis enim, in laoreet orci.
+                                                Donec et elit at nulla
+                                                congue interdum sit amet varius erat.
+                                                Nulla sit amet risus
+                                                pellentesque, dignissim massa ut, dignissim arcu.
+                                                Morbi dapibus ligula
+                                                at faucibus tempus. Aenean vehicula, tortor gravida
+                                                elementum tincidunt,
+                                                justo lorem vestibulum ex, eget egestas arcu tellus
+                                                in magna. Vivamus
+                                                gravida, ipsum vel luctus luctus, nisi felis
+                                                vestibulum est, nec
+                                                interdum tellus leo quis tellus. Sed sit amet
+                                                convallis enim, in laoreet orci.
+                                                Nunc sodales justo ut
+                                                nisi euismod, quis condimentum leo varius.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-bar-content" id="item-3">
+                                        <div class="texts">
+
+                                            <p class="paragraph">
+
+                                            <div class="reviews">
+
+
+
+                                                <div class="people-info">
+
+                                                    <div class="image">
+
+                                                        <img src="./assets/img/products/avatar-1.png" alt="">
+
+                                                    </div>
+
+                                                    <div class="info">
+
+                                                        <p>Martina Solsker</p>
+                                                        <span>22 Mart,
+                                                            2018 at 18:44</span>
+                                                        <p>Integer id
+                                                            eros et mi fringilla imperdiet. In dictum turpis
+                                                            eget
+                                                            magna
+                                                            viverra condimentum. Ut malesuada
+
+                                                        </p>
+
+                                                    </div>
+
+
+
+                                                </div>
+
+
+
+                                                <div class="people-info">
+
+                                                    <div class="image">
+
+                                                        <img src="./assets/img/products/avatar-2.png" alt="">
+
+                                                    </div>
+
+                                                    <div class="info">
+
+                                                        <p>Deni Aniston</p>
+                                                        <span>09
+                                                            Octomber, 2018 at 12:22</span>
+                                                        <p>Nulla
+                                                            accumsan, lacus sed suscipit rutrum, turpis augue
+                                                            accumsan
+                                                            metus, in accumsan urna mi vehicula
+
+                                                        </p>
+
+                                                    </div>
+
+
+
+                                                </div>
+
+
+
+
+                                                <div class="people-info">
+
+                                                    <div class="image">
+
+                                                        <img src="./assets/img/products/avatar-3.png" alt="">
+
+                                                    </div>
+
+                                                    <div class="info">
+
+                                                        <p>Deni Aniston</p>
+                                                        <span>09
+                                                            Octomber, 2018 at 12:22</span>
+                                                        <p>Nulla
+                                                            accumsan, lacus sed suscipit rutrum, turpis augue
+                                                            accumsan
+                                                            metus, in accumsan urna mi vehicula
+
+                                                        </p>
+
+                                                    </div>
+
+
+
+                                                </div>
+
+
+
+                                                <div class="input-submit">
+
+
+
+                                                    <h2>LEAVE YOUR REVIEW
+                                                        <div class="_line"></div>
+                                                        <small>Your
+                                                            email address will not be published. Required fields
+                                                            are marked *</small>
+                                                    </h2>
+                                                    <span>Your Rating:
+                                                    </span> <i class="fa-regular fa-face-frown"></i>
+                                                    <i class="fa-regular fa-face-grin"></i> <i
+                                                        class="fa-regular fa-face-grin-wide"></i> <i
+                                                        class="fa-regular fa-face-grin"></i> <i
+                                                        class="fa-regular fa-face-grin-beam"></i>
+
+                                                    <form class="form-submit">
+
+                                                        <div class="input-name">
+
+                                                            <div class="group">
+                                                                <input type="text" required>
+                                                                <span class="highlight"></span>
+                                                                <span class="bar"></span>
+
+                                                                <label>Your Name (required)*
+                                                                </label>
+                                                            </div>
+
+
+                                                            <div class="group">
+                                                                <input type="text" required>
+                                                                <span class="highlight"></span>
+                                                                <span class="bar"></span>
+
+                                                                <label>Your Name (required)*
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="group subject">
+                                                            <input type="text" required>
+                                                            <span class="highlight"></span>
+                                                            <span class="bar"></span>
+                                                            <label>Subject *
+                                                            </label>
+                                                        </div>
+
+
+
+                                                        <div class="group subject post-contect">
+                                                            <input type="text" required>
+                                                            <span class="highlight"></span>
+                                                            <span class="bar"></span>
+
+                                                            <label>Post contect *
+                                                            </label>
+                                                        </div>
+
+                                                        <button type="button" class="btn btn-danger">Submit
+                                                            Review</button>
+
+                                                    </form>
+
+
+
+
+
+
+                                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+
+                </section>
+
+            </div>
+
+
+            <div class="featured-roducts">
+                <h4>Featured Products</h4>
+                <div class="line">
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <section id="footer">
+
+            <div class="container mt-5">
+
+                <div class="row">
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+
+                        <div class="logo-service my-5">
+
+                            <div class="logo-about">
+
+                                <a href=""><img src="./assets/img/sophilogofooter.png" alt=""></a>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada fringilla
+                                    sem,
+                                    at dictum lectus ultricies quis. Etiam eu bibendum orci. Aliquam erat volutpat.
+                                </p>
+                                <a href="">MORE ABOUT US</a>
+
+                            </div>
+                            <div class="services">
+
+                                <h5 class="h5">Services</h5>
+
+                                <ul>
+                                    <li><a href=""></a>Hotel Growth</li>
+                                    <li><a href=""></a>Hotel Lean</li>
+                                    <li><a href=""></a>Financial Planning</li>
+                                    <li><a href=""></a>Insurance Consulting</li>
+                                    <li><a href=""></a>Retirenment Planing</li>
+                                    <li><a href=""></a>Tax Planing</li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+
+                        <div class="subscribe-address my-5">
+                            <div class="subscribe">
+
+                                <h5>Subscribe Newsletter</h5>
+                                <p>Get latest updates and offers.</p>
+                                <input type="email" placeholder="Enter your email address">
+                                <button type="submit" class="btn">SUBSCRIBE US</button>
+
+                            </div>
+
+
+                            <div class="addresscommunications">
+
+                                <h5>Contact Us</h5>
+
+                                <div class="communications">
+
+                                    <!-- <div class="location">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div> -->
+
+                                    <div class="address">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <p>Apple St, New York, NY 10012, USA</p>
+
+                                    </div>
+
+                                    <div class="telnumber">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <p>( 018) 65 524 8503 / (125) 954 7854</p>
+
+                                    </div>
+
+                                    <div class="message">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <p>contact@lamarena.com</p>
+                                    </div>
+
+
+                                    <div class="socials">
+
+                                        <ul class="socials-inline">
+                                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+    </footer>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/e29b1b43d1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./assets/js/products.js"></script>
+
+</body>
+
+</html>
