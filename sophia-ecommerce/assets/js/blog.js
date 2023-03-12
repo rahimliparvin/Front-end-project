@@ -1,11 +1,5 @@
 $(document).ready(function () {
 
-
-
-
-
-
-
 	//Valyuta 
 
 	let europrice = document.querySelector("#navup .europrice");

@@ -66,7 +66,7 @@
   font-family: "Poppins", sans-serif;
 }
 #navup .navbarup .likelogin {
-  margin-left: 650px;
+  margin-left: 700px;
   cursor: pointer;
 }
 #navup .navbarup .likelogin a {
@@ -1001,54 +1001,49 @@
   padding-top: 5px;
 }
 
-#prodact-star {
+#fiveproductsstar {
   margin-top: 45px;
 }
-#prodact-star .info-prodacts-star ._line {
+#fiveproductsstar .fivestarproducts .underline {
   margin-top: 5px;
   display: flex;
   margin-bottom: 18px;
 }
-#prodact-star .info-prodacts-star ._line ._line-black {
+#fiveproductsstar .fivestarproducts .underline .underlineblack {
   height: 2px;
   width: 38px;
   background-color: black;
 }
-#prodact-star .info-prodacts-star ._line ._line-gray {
+#fiveproductsstar .fivestarproducts .underline .underlinegray {
   height: 2px;
   width: 287px;
   background-color: rgba(160, 157, 157, 0.562);
 }
-#prodact-star .info-prodacts-star .info-prodacts-button {
+#fiveproductsstar .fivestarproducts .topproductsinfo {
   display: flex;
   gap: 20px;
   margin-top: 20px;
 }
-#prodact-star .info-prodacts-star .info-prodacts-button .featured-products-img a {
+#fiveproductsstar .fivestarproducts .topproductsinfo .topproductsimg a {
   text-decoration: none;
 }
-#prodact-star .info-prodacts-star .info-prodacts-button .featured-products-img a img {
-  width: 86px;
-  height: 86px;
+#fiveproductsstar .fivestarproducts .topproductsinfo .topproductsimg a img {
+  width: 80px;
+  height: 80px;
   background-color: #F5F5F5;
 }
-#prodact-star .info-prodacts-star .info-prodacts-button .star-icon {
-  padding-top: 10px;
-}
-#prodact-star .info-prodacts-star .info-prodacts-button .star-icon .info-prodact-text a {
+#fiveproductsstar .fivestarproducts .topproductsinfo .topproductname .topproductnamestars a {
   text-decoration: none;
 }
-#prodact-star .info-prodacts-star .info-prodacts-button .star-icon .info-prodact-text a span {
-  font-size: 15px;
-  color: black;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida SansRegular", " Lucida Grande", " Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+#fiveproductsstar .fivestarproducts .topproductsinfo .topproductname .topproductnamestars a span {
+  font-size: 17px;
+  color: #333333;
+  font-weight: 600;
 }
-#prodact-star .info-prodacts-star .info-prodacts-button .star-icon i {
-  color: goldenrod;
+#fiveproductsstar .fivestarproducts .topproductsinfo .topproductname i {
+  color: #FFA726;
 }
-#prodact-star .info-prodacts-star .info-prodacts-button .star-icon h6 {
-  padding-top: 5px;
+#fiveproductsstar .fivestarproducts .topproductsinfo .topproductname h6 {
   font-size: 15px;
 }
 

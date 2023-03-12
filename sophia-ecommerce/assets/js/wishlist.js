@@ -2,6 +2,50 @@ $(document).ready(function () {
 
 
 
+        //Valyuta 
+    
+        let europrice = document.querySelector("#navup .europrice");
+    
+        europrice.addEventListener("click", function () {
+    
+            let euroPriceText = this.firstElementChild.innerText;
+    
+            this.parentNode.previousElementSibling.innerText = euroPriceText;
+        })
+    
+        let usdprice = document.querySelector("#navup .usdprice");
+    
+        usdprice.addEventListener("click", function () {
+            let usdPriceText = this.firstElementChild.innerText;
+    
+            this.parentNode.previousElementSibling.innerText = usdPriceText;
+        })
+    
+    
+    
+    
+        //flag====================================================
+    
+    
+    
+    
+        let liflags = document.querySelectorAll(".dropdown-secondmenu li");
+    
+    
+        liflags.forEach(liflag => {
+    
+            liflag.addEventListener("click", function () {
+    
+                this.parentNode.previousElementSibling.children[0].setAttribute('src', this.children[0].getAttribute("src"));
+                this.parentNode.previousElementSibling.children[1].innerText = this.children[1].innerText;
+            })
+        });
+    
+    
+    
+    
+    
+    
 
     let tableBody = document.querySelector("tbody");
 
@@ -85,49 +129,7 @@ $(document).ready(function () {
 
 
 
-    // let deleteicons = document.querySelectorAll(".deleteicon")
-
-    // deleteicons.forEach(deleteicon => {
-
-
-
-
-    //     deleteicon.addEventListener("click", function () {
-
-    //         let products = JSON.parse(localStorage.getItem("wishlist"));
-
-    //         for (const product of products) {
-
-    //             if (product.id == this.getAttribute("data-id")) {
-
-    //                 let prod = products.indexOf(product);
-
-    //                 products.splice(prod, 1);
-
-
-    //                 let trs = document.querySelectorAll("tr");
-
-    //                 for (const tr of trs) {
-
-    //                     if (tr.getAttribute("data-id") == this.getAttribute("data-id")) {
-
-    //                         tr.classList.add("d-none");
-    //                     }
-    //                 }
-    //             }
-    //         }
-
-    //         localStorage.setItem("wishlist", JSON.stringify(products));
-
-
-         
-    //     })
-
-
-
-    // });
-
-
+  
     let deleteicons = document.querySelectorAll(".deleteicon")
 
     deleteicons.forEach(deleteicon => {

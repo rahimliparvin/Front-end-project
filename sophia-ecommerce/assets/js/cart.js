@@ -1,6 +1,66 @@
 $(document).ready(function () {
 
 
+
+    $(document).ready(function () {
+
+
+
+
+
+
+
+        //Valyuta 
+    
+        let europrice = document.querySelector("#navup .europrice");
+    
+        europrice.addEventListener("click", function () {
+    
+            let euroPriceText = this.firstElementChild.innerText;
+    
+            this.parentNode.previousElementSibling.innerText = euroPriceText;
+        })
+    
+        let usdprice = document.querySelector("#navup .usdprice");
+    
+        usdprice.addEventListener("click", function () {
+            let usdPriceText = this.firstElementChild.innerText;
+    
+            this.parentNode.previousElementSibling.innerText = usdPriceText;
+        })
+    
+    
+    
+    
+        //flag====================================================
+    
+    
+    
+    
+        let liflags = document.querySelectorAll(".dropdown-secondmenu li");
+    
+    
+        liflags.forEach(liflag => {
+    
+            liflag.addEventListener("click", function () {
+    
+                this.parentNode.previousElementSibling.children[0].setAttribute('src', this.children[0].getAttribute("src"));
+                this.parentNode.previousElementSibling.children[1].innerText = this.children[1].innerText;
+            })
+        });
+    
+    
+    })
+
+
+
+
+
+
+
+
+
+
     let tableBody = document.querySelector("tbody");
 
     let products = JSON.parse(localStorage.getItem("basket"));
@@ -10,8 +70,6 @@ $(document).ready(function () {
     if (products == null) {
 
         let table = document.querySelector("table")
-
-       // table.classList.add("d-none");
 
        table.classList.add("d-none");
 
@@ -231,6 +289,50 @@ $(document).ready(function () {
 
             let products = JSON.parse(localStorage.getItem("basket"));
 
+
+
+            if (products.length == 1) {
+                
+                localStorage.removeItem("basket");
+
+                let table = document.querySelector(".table");
+
+                table.innerHTML = "";
+
+                let infobasket = document.querySelector(".infoBasket")
+    
+                infobasket.classList.remove("d-none");
+    
+                let getShopping = document.querySelector(".getShopping");
+    
+                getShopping.classList.remove("d-none");
+    
+                let continueShopping = document.querySelector(".continueShopping");
+    
+                continueShopping.classList.add("d-none");
+    
+                let grand = document.querySelector(".grand");
+    
+                grand.classList.add("d-none");
+    
+                let granddollar = document.querySelector(".granddollar");
+    
+                granddollar.classList.add("d-none");
+    
+                let grandtotalprice = document.querySelector(".grandtotalprice");
+    
+                grandtotalprice.classList.add("d-none");
+    
+                let procedCheckout = document.querySelector(".procedCheckout");
+    
+                procedCheckout.classList.add("d-none");
+
+                return;
+
+
+            }
+           
+
             for (const product of products) {
                 
                 if (product.id == this.getAttribute("data-id")) {
@@ -264,6 +366,8 @@ $(document).ready(function () {
                 sum += product.total;
 
                 grandtotalprices.innerText = sum;
+
+                
             });
 
 

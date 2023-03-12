@@ -389,60 +389,80 @@
   line-height: 26px;
 }
 
-#ourexperts {
-  padding-top: 60px;
-  margin-bottom: 200px;
-}
-#ourexperts .experts {
+#teams .title {
   text-align: center;
-  justify-content: center;
-  margin-bottom: 35px;
+  margin-top: 50px;
 }
-#ourexperts .experts h2 {
+#teams .title h2 {
+  margin-bottom: 10px;
   font-size: 36px;
+  text-transform: capitalize;
+  line-height: 1;
+  letter-spacing: 0.02em;
   color: #383838;
   font-weight: 700;
 }
-#ourexperts .experts p {
-  font-size: 16px;
-  color: #777777;
+#teams .title p {
+  color: #777;
+  font-weight: 500;
 }
-#ourexperts .expert {
-  width: 295px;
-  position: relative;
-}
-#ourexperts .expert img {
-  width: 100%;
-  height: 368px;
-}
-#ourexperts .expert .expertsocial {
-  top: 315px;
-  width: 295px;
-  position: absolute;
-  height: 65px;
-  z-index: 0;
-  flex-direction: row;
-  box-sizing: border-box;
+#teams .team-members {
   display: flex;
-  place-content: center space-evenly;
+  margin-top: 40px;
+}
+#teams .team-members .single-team-member {
+  width: 295px;
+}
+#teams .team-members .single-team-member:hover img {
+  opacity: 0.5;
+}
+#teams .team-members .single-team-member:hover .social {
+  transform: translateY(-65px);
+}
+#teams .team-members .single-team-member:hover .text {
+  background-color: #444444;
+}
+#teams .team-members .single-team-member:hover .text h4 {
+  color: white;
+}
+#teams .team-members .single-team-member:hover .text p {
+  color: white;
+}
+#teams .team-members .single-team-member .img {
+  height: 365px;
+  overflow-y: hidden;
+}
+#teams .team-members .single-team-member .img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+#teams .team-members .single-team-member .social {
+  display: flex;
+  height: 65px;
   align-items: center;
-  background-color: #3f51b5 !important;
+  justify-content: space-evenly;
+  background-color: #4050b5;
+  transition: all 0.4s;
 }
-#ourexperts .expert .expertsocial i {
-  color: #fff;
-  font-size: 17px;
-  line-height: 35px;
-  display: block;
+#teams .team-members .single-team-member .social a i {
+  color: white;
 }
-#ourexperts .expert .expertnamejob {
-  z-index: 2;
-  position: absolute;
-  margin-top: 20px;
+#teams .team-members .single-team-member .text {
+  border: 1px solid #f6f6f6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: 0.4s ease;
   text-align: center;
+}
+#teams .team-members .single-team-member .text h4 {
+  margin: 0;
   font-size: 18px;
-  text-transform: capitalize;
-  line-height: 1;
-  height: 81px;
+  font-weight: 500;
+}
+#teams .team-members .single-team-member .text p {
+  margin: 0;
+  color: #333;
 }
 
 #footer {
@@ -520,6 +540,7 @@
   border-radius: 4px;
   padding: 0 65px 0 20px;
   color: #777;
+  outline: none !important;
 }
 #footer .subscribe-address .subscribe button {
   cursor: pointer;

@@ -562,84 +562,115 @@
 
 }
 
+#teams {
 
-#ourexperts {
 
-    padding-top: 60px;
-    margin-bottom: 200px;
 
-    .experts {
+    .title {
 
         text-align: center;
-        justify-content: center;
-        margin-bottom: 35px;
-
+        margin-top: 50px;
 
         h2 {
+            margin-bottom: 10px;
             font-size: 36px;
+            text-transform: capitalize;
+            line-height: 1;
+            letter-spacing: .02em;
             color: #383838;
             font-weight: 700;
+            // text-align: center;
         }
 
         p {
-            font-size: 16px;
-            color: #777777;
+            color: #777;
+            font-weight: 500;
         }
-
     }
 
-    .expert {
+    .team-members {
+        display: flex;
+        margin-top: 40px;
+        
 
-        width: 295px;
-        position: relative;
-
-
-        img {
-            width: 100%;
-            height: 368px;
-            ;
-        }
-
-        .expertsocial {
-            top: 315px;
+        .single-team-member {
             width: 295px;
-            position: absolute;
-            height: 65px;
-            z-index: 0;
-            flex-direction: row;
-            box-sizing: border-box;
-            display: flex;
-            place-content: center space-evenly;
-            align-items: center;
-            background-color: #3f51b5 !important;
+            // height: 365.88px;
 
-            i {
-                color: #fff;
-                font-size: 17px;
-                line-height: 35px;
-                display: block;
+            &:hover {
+                img {
+                    opacity: 0.5;
+                }
+
+                .social {
+                    transform: translateY(-65px);
+                }
+
+                .text {
+                    h4 {
+                        color: white;
+                    }
+
+                    p {
+                        color: white;
+                    }
+
+                    background-color: #444444;
+                }
+            }
+
+
+            .img {
+                // width: 295px;
+                height: 365px;
+                overflow-y: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.4s;
+                }
+            }
+
+            .social {
+                display: flex;
+                height: 65px;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: #4050b5;
+                transition: all 0.4s;
+
+                a {
+                    i {
+                        color: white;
+                    }
+                }
+            }
+
+            .text {
+
+
+                border: 1px solid #f6f6f6;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                transition: .4s ease;
+                text-align: center;
+
+                h4 {
+                    margin: 0;
+                    font-size: 18px;
+
+                    font-weight: 500;
+                }
+
+                p {
+                    margin: 0;
+                    color: #333;
+                }
+
             }
         }
-
-        .expertnamejob {
-            z-index: 2;
-            position: absolute;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 18px;
-            text-transform: capitalize;
-            line-height: 1;
-            height: 81px;
-
-        }
-
-
-
     }
-
-
-
-
 }
 
 #footer {
@@ -754,7 +785,8 @@
                 border: 1px solid #e2e2e2;
                 border-radius: 4px;
                 padding: 0 65px 0 20px;
-                color: #777
+                color: #777;
+                outline: none !important;
             }
 
             button {
